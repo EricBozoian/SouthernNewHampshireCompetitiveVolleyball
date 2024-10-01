@@ -1,0 +1,554 @@
+/* Media query for mobile devices (screen width 800px or smaller) */
+@media only screen and (max-width: 800px) {
+  /* Adjust event boxes for mobile */
+  .event {
+    width: 90%; !important;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Adjust footer and navbar for mobile */
+  footer, nav ul {
+    width: 100%;
+    padding: 15px;
+  }
+  .team-box {
+        flex: 1 1 100%; /* Stacks boxes vertically for smaller screens */
+    }
+  /* Make the menu items stack vertically */
+ nav ul {
+      flex-direction: column; /* Make the items stack vertically */
+      width: 100%; /* Use full width on mobile */
+   }
+   nav ul li {
+      margin: 10px 0; /* Add spacing between items */
+   }
+   nav ul li a {
+      font-size: 0.9rem; /* Reduce font size for mobile */
+   }
+  nav ul li {
+    display: block; /* Ensure each item is a block element */
+    margin: 5px 0; /* Add space between menu items */
+  }
+
+  /* Ensure buttons like 'All Events' fit the width */
+  .button {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 80%;
+  }
+     .contact-box {
+      max-width: 90%; /* Reduce the width of the contact box on mobile */
+      margin: 20px auto; /* Add margin for spacing on mobile */
+   }
+
+   .contact-content img {
+      width: 80px; /* Adjust the size of the image */
+      height: 80px;
+   }
+
+   .contact-content p {
+      font-size: 0.9rem; /* Reduce font size for mobile readability */
+   }
+    .container, main, .about-league, .playoff-textbox, .league-schedule {
+      padding: 10px; /* Reduce padding for smaller screens */
+   }
+   .contact-item {
+      width: 100%; /* Ensure contact items fit the width of the mobile screen */
+      margin-bottom: 20px; /* Add margin between items */
+   }
+}
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Header and logo styling */
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2em;
+    color: #003366;
+}
+
+.container {
+   width: 50%; /* Adjust width as needed */
+   margin: 0 auto;
+   text-align: left; /* Optional, can adjust text alignment */
+}
+
+p {
+  color: #666;
+  font-size: 1em;
+  word-wrap: break-word; /* Ensures long words wrap */
+  max-width: 100%; /* Ensures the paragraph width doesn't exceed its container */
+}
+/* Button styles */
+.btn {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.btn:hover {
+    background-color: #00509e;
+}
+
+/* Main content alignment */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Subheading styles */
+h2 {
+    font-size: 1.8em;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* Update the .updates class to ensure proper alignment */
+.updates {
+    max-width: 1200px; /* Adjust this to match your desired width */
+    margin: 0 auto; /* Center it horizontally */
+}
+
+.event a {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #003366;
+    text-decoration: none;
+}
+
+.event p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Menu styles */
+nav ul {
+    background-color: #002855;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+    width: 50%; /* For Desktop */
+    margin: 0 auto; /* Center the navigation bar */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #00509e;
+}
+
+/* Main dropdown styling */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #002855;
+    width: auto; /* Adjusts the width automatically to the content */
+    padding: 10px; /* Adds some padding around the content */
+}
+
+/* Hover state to display the dropdown */
+nav ul li:hover ul {
+    display: block;
+}
+
+/* Adjust the nested dropdown width */
+nav ul li ul li {
+    width: auto; /* Let the width adjust based on content */
+}
+
+/* Style for the anchor links in the dropdown */
+nav ul li ul li a {
+    display: block;
+    padding: 5px 15px; /* Adjusts the padding inside each link */
+    background-color: #002855;
+    color: white;
+    white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+nav ul li ul li a:hover {
+    background-color: #00509e;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #002855;
+    color: white;
+    width: 50%; /* For Desktop */
+    margin: 0 auto; /* Center the footer */
+}
+   /* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Hide the slides */
+.mySlides {
+  display: none;
+}
+
+/* Position the slideshow container */
+#calendar-slideshow {
+  position: relative;
+  max-width: 800px; /* Adjust width based on your images */
+  margin: auto;
+}
+
+/* Style the next and previous buttons specifically for the calendar */
+#calendar-slideshow .prev, #calendar-slideshow .next {
+   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black; /* Change to black */
+  font-weight: bold;
+  font-size: 24px; /* Increase the size of the arrow */
+  border-radius: 3px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.5); /* Optional: Add a light background */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* On hover, add a background color to the arrows */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8); /* Darken the background on hover */
+}
+
+}
+
+/* Dots (circles) */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fade animation for slides */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.team-roster-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.team-roster-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.team-rosters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.team-box {
+    border: 2px solid #1e3d7a;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.team-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.team-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.team-box p {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+ul {
+    list-style-position: inside; /* Moves bullets inside the list item */
+    padding-left: 0; /* Resets any extra padding */
+    margin-left: 20px; /* Adds a margin to indent the list */
+}
+
+ul ul {
+    list-style-type: disc; /* Ensures the sub-list has the correct bullet style */
+    padding-left: 20px; /* Indents the sub-lists properly */
+    margin-left: 0;
+}
+
+li {
+    margin-left: 0; /* Ensures the list item doesn't add extra space */
+}
+/* Add styling for the container */
+.info-box {
+    max-width: 400px; /* Control the width of the container */
+    margin: 0 auto; /* Centers the box horizontally */
+    padding: 20px; /* Adds padding around the content */
+    background-color: #f8f8f8; /* Optional: Add a background color */
+    border-radius: 8px; /* Optional: Round the corners */
+    text-align: left; /* Ensures the text is aligned to the left */
+    border: 1px solid #ccc; /* Optional: Border around the box */
+}
+
+/* Style for the unordered list */
+.info-box ul {
+    list-style-position: inside; /* Bullets will be inside the list item */
+    padding-left: 20px; /* Adds consistent padding inside */
+    margin-left: 0; /* Ensures no extra margins */
+}
+
+/* Nested unordered list */
+.info-box ul ul {
+    list-style-type: disc; /* Keep the default disc style for sub-bullets */
+    margin-left: 20px; /* Ensures the sub-list indents correctly */
+    padding-left: 20px;
+}
+
+/* List item styles */
+.info-box li {
+    margin: 5px 0; /* Adds spacing between list items */
+    line-height: 1.5em; /* Adds line height for readability */
+}
+.about-league {
+    max-width: 800px; /* Restricts the width to 800px */
+    margin: 0 auto; /* Centers the section on the page */
+    padding: 20px; /* Optional: Adds padding inside for better spacing */
+    text-align: center; /* Center-aligns the heading */
+}
+
+.about-league p {
+    text-align: left; /* Ensures the paragraph remains left-aligned */
+}
+.playoff-textbox {
+    max-width: 800px; /* Restricts the width to 800px */
+    margin: 0 auto; /* Centers the section on the page */
+    padding: 20px; /* Optional: Adds padding inside for better spacing */
+    text-align: center; /* Center-aligns the heading */
+}
+
+.playoff-textbox p {
+    text-align: left; /* Ensures the paragraph remains left-aligned */
+}
+.league-schedule {
+    max-width: 800px; /* Limits the width to 800px */
+    margin: 0 auto; /* Centers the section on the page */
+    padding: 20px; /* Optional: Adds padding for better spacing */
+    text-align: center; /* Centers the heading */
+}
+
+.league-schedule p {
+    text-align: left; /* Ensures the paragraph remains left-aligned */
+}
+.contact-item {
+    background-color: white;
+    border: 2px solid #001F3F;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    margin: 0 5px; /* Adjust this value as needed to change the space between boxes */
+}
+.contact-item img {
+    width: 100px; /* Size of the icons */
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px auto; /* Centers the image horizontally */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* manually set the spacing between items */
+}
+
+.contact-container .contact-item {
+    margin-bottom: 20px; /* Adds more space below the boxes */
+}
+.contact-box {
+    border: 2px solid #000; /* Keep the existing border style */
+    border-radius: 10px; /* Keep the rounded corners */
+    padding: 20px; /* Keep the padding inside the box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px; /* Max width for the box */
+    margin: 0 auto 50px; /* This adds 50px space between the contact box and the footer */
+}
+
+.contact-content img {
+    margin-bottom: 10px; /* Space between the image and the text */
+}
+
+.contact-content p {
+    margin: 5px 0; /* Adjust spacing between text lines */
+    text-align: center; /* Center the text */
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;  /* Ensures the image retains its aspect ratio */
+}
+/* Container styles for team rosters */
+.team-rosters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between the boxes */
+}
+
+.team-box {
+    flex: 1 1 calc(20% - 20px); /* Adjusting the size to about 1/4 of the original */
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+#events-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#events-container p {
+    text-align: left;
+}
+/* General styling for the event container */
+#news-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+/* Styling for individual event entries */
+.event {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional, for a clean look */
+    max-width: 100%; /* Ensure the events don't go wider than their container */
+}
+
+/* Title styling (with or without links) */
+.event h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.event a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.event a:hover {
+  text-decoration: underline;
+}
+
+/* Date, location, and description styling */
+.event p {
+  font-size: 16px;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+/* Emphasize important labels like "Date" and "Location" */
+.event strong {
+  color: #2c3e50;
+  font-weight: bold;
+}
+.event h2 {
+  font-size: 2.5em; /* Make the font size larger */
+  color: #003366;  /* Set the blue color */
+  margin-bottom: 20px; /* Add some spacing below */
+  font-weight: bold; /* Ensure the text is bold */
+}
+
+
+
+
+

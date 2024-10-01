@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern NH Competitive Volleyball - League</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script> <!-- Include Mustache.js -->
+</head>
+<body>
+    <header>
+        <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
+        <h1>Southern New Hampshire Competitive Volleyball</h1>
+        <p>A place for competitive volleyball</p>
+        <a href="All Events.html">
+    <button class="btn">All Events</button>
+</a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="League.html">League</a></li>
+           <li><a href="#">Tournaments</a>
+                <ul class="dropdown">
+                    <li><a href="yankee-tournaments.html" class="active">Yankee Tournaments</a></li>
+                    <li><a href="SNHCVB-Tournaments.html">SNHCVB Tournaments</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Indoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Co-ed Drop-in Nights.html">Weeknight Co-ed</a></li>
+                    <li><a href="RCO Drop-in Nights.html">Weeknight RCO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Outdoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Grass Drop-in.html">Weeknight Grass</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Sponsors.html">Sponsors</a></li>
+        </ul>
+    </nav>
+
+    <!-- Yankee Tournaments main page -->
+    <section class="league">
+        <h2>Yankee Tournaments</h2>
+        <img src="YK Tournment-800x400.png" alt="League Action"
+        
+        <!-- Important Information Section -->
+     <div class="info-box">
+    <h3>Important Information:</h3>
+    <ul>
+        <li>Cost $195</li>
+        <li>How to sign up: Click the links below</li>
+        <li>Registration deadlines: One week before the tournament</li>
+            <li>Format: 6v6</li>
+            <li>Rules: See event for details</li>
+    </ul>
+     </div>
+
+       <!-- Yankee Tournament Description Description -->
+        <div class="about-league">
+            <h3>About Yankee Tournaments:</h3>
+            <p>Southern New Hampshire Competitive Volleyball (SNHCVB) hosts Yankee-sanctioned tournaments at Girls Inc. of New Hampshire, offering a range of competitive formats, including Reverse Co-Ed (RCO), Men’s, and Women’s divisions. These events are held in accordance with the rules and standards set by the Yankee Volleyball Association, a branch of USA Volleyball, which promotes fair and competitive play across New England.
+At SNHCVB, we provide tournaments that are challenging and enjoyable for everyone. Players receive individual ratings that are used to ensure balanced team compositions, maintaining fairness and competitiveness in every match.
+Tournament Formats
+Reverse Co-Ed (RCO): Teams are co-ed, but women hit on the front row, and men serve from behind the attack line, adding a unique twist to the game.
+Men’s Division: Competitive tournaments designed specifically for men’s teams, adhering to USAV men’s height standards.
+Women’s Division: Exclusive tournaments for women’s teams, featuring USAV women’s height standards and competition formats.
+Our tournaments follow the official USA Volleyball rules and Yankee Volleyball Association’s guidelines, which help us maintain the integrity and professionalism of each event.</p>
+        </div>
+
+      <!-- Event Information Rendered by Mustache.js -->
+        <section class="updates">
+            <h3>Upcoming Tournaments</h3>
+            <div id="news-container"></div> <!-- This is where Mustache will render the tournament events -->
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+     <footer>
+        <p>Southern New Hampshire Competitive Volleyball © 2024</p>
+    </footer>
+         <!-- Mustache.js Setup -->
+    <script>
+        var template = `
+            {{#events}}
+            <div class="event">
+                {{#link}}
+                <a href="{{link}}">{{title}}</a>
+                {{/link}}
+                {{^link}}
+                <h3>{{title}}</h3>
+                {{/link}}
+                {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
+                {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
+                {{#description}}<p>{{description}}</p>{{/description}}
+            </div>
+            {{/events}}
+        `;
+
+       var data = {
+    events: [
+         {
+        title: "Yankee Women's C+ Tournament (27 points) @ Girls Inc of NH",
+        date: "Sat, Oct 26, 9:00 AM - 6:00 PM EDT",
+        location: "Girls Inc of New Hampshire, 27 Burke St, Nashua, NH",
+        link: "https://ericbozoian.github.io/SNHCVB-staging/10-26%20Yankee%20Tournament%20template%2009-29.html",
+        description: "Join us for the Yankee Women's C+ Tournament at Girls Inc. $195 per team, 5 teams max. The tournament follows USA Volleyball rules and Yankee Volleyball Association policies. Teams must not exceed 27 combined points. Prizes for the top 3 teams, plus an after-party at Margaritas in Nashua! Click the event header for more details and to sign up."
+    },
+        { 
+            title: "", 
+            date: "", 
+            location: "", 
+            link: "",  // Added empty link section
+            description: "" 
+        },
+        { 
+            title: "", 
+            date: "", 
+            location: "", 
+            link: "", 
+            description: "" 
+        },
+        { 
+            title: "", 
+            date: "", 
+            location: "", 
+            link: "",  // Added empty link section
+            description: "" 
+        }
+    ]
+};
+
+        var rendered = Mustache.render(template, data);
+        document.getElementById('news-container').innerHTML = rendered;
+    </script>
+</body>
+</html>

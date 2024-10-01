@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern New Hampshire Competitive Volleyball</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
+        <h1>Southern New Hampshire Competitive Volleyball</h1>
+        <p>A place for competitive volleyball</p>
+        <a href="All Events.html" class="btn">All Events</a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="League.html">League</a></li>
+            <li><a href="#">Tournaments</a>
+                <ul class="dropdown">
+                    <li><a href="yankee-tournaments.html">Yankee Tournaments</a></li>
+                    <li><a href="SNHCVB-Tournaments.html">SNHCVB Tournaments</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Indoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Co-ed Drop-in Nights.html">Weeknight Co-ed</a></li>
+                    <li><a href="RCO Drop-in Nights.html">Weeknight RCO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Outdoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Grass Drop-in.html">Weeknight Grass</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Sponsors.html">Sponsors</a></li>
+        </ul>
+    </nav>
+
+    <!-- News and Updates Section -->
+    <section class="updates">
+        <h2>News and Updates:</h2>
+        <div id="news-container"></div> <!-- Corrected ID -->
+    </section>
+
+    <footer>
+        <p>Southern New Hampshire Competitive Volleyball © 2024</p>
+    </footer>
+<script>
+    var template = `
+        {{#events}}
+            <div class="event">
+                {{#link}}
+                    <a href="{{link}}" target="_blank"><h2>{{title}}</h2></a> <!-- Title inside the link and h2 -->
+                {{/link}}
+                {{^link}}
+                    <h2>{{title}}</h2> <!-- Use h2 for non-link titles -->
+                {{/link}}
+                {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}} <!-- Add Date as strong -->
+                {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}} <!-- Add Location as strong -->
+                {{#description}}<p>{{description}}</p>{{/description}} <!-- Add description text -->
+            </div>
+        {{/events}}
+    `;
+    
+    var data = {
+        events: [
+            { title: "Our New Website is Live!", date: "09/30/2024", location: "", link: "", description: "We are excited to announce that our new website is officially up and running! You can now find all our events easily in one place. Southern New Hampshire Competitive Volleyball has switched to a more user-friendly platform to ensure you have the best experience when registering for events. In a big change, we are transitioning from Humanitix to our very own event-hosting platform right here on the website! Built by Eric in his spare time, this platform will make it easier for you to stay informed, sign up, and keep track of upcoming games and tournaments. Check out the new event sign-up process and enjoy the streamlined registration experience. Thank you for being a part of our community, and we can’t wait to see you on the court!" },
+            { title: "", date: "", location: "", link: "", description: "" }, // Empty event will be ignored
+            { title: "", date: "", location: "", link: "", description: "" }, // Empty event will be ignored
+            { title: "", date: "", location: "", link: "", description: "" }, // Empty event will be ignored
+            { title: "", date: "", location: "", link: "", description: "" }  // Empty event will be ignored
+        ]
+    };
+
+    var rendered = Mustache.render(template, data);
+    document.getElementById('news-container').innerHTML = rendered;
+</script>
+</body>
+</html>

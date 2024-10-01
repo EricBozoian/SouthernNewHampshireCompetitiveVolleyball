@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern NH Competitive Volleyball - League</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+     <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script> <!-- Mustache.js included -->
+</head>
+<body>
+    <header>
+        <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
+        <h1>Southern New Hampshire Competitive Volleyball</h1>
+        <p>A place for competitive volleyball</p>
+               <a href="All Events.html">
+    <button class="btn">All Events</button>
+</a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="League.html">League</a></li>
+           <li><a href="#">Tournaments</a>
+                <ul class="dropdown">
+                    <li><a href="yankee-tournaments.html">Yankee Tournaments</a></li>
+                    <li><a href="SNHCVB-Tournaments.html" class="active">SNHCVB Tournaments</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Indoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Co-ed Drop-in Nights.html">Weeknight Co-ed</a></li>
+                    <li><a href="RCO Drop-in Nights.html">Weeknight RCO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Outdoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Grass Drop-in.html">Weeknight Grass</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Sponsors.html">Sponsors</a></li>
+        </ul>
+    </nav>
+
+    <!-- Yankee Tournaments main page -->
+    <section class="league">
+        <h2>SNHCVB Tournaments</h2>
+        <img src="SNHCVB-Tournment-800x400.png" alt="League Action"
+        
+        <!-- Important Information Section -->
+     <div class="info-box">
+    <h3>Important Information:</h3>
+    <ul>
+        <li>Cost: $165</li>
+        <li>How to sign up: Click the links below</li>
+        <li>Registration deadlines: One week before the tournament</li>
+            <li>Format: 6v6 co-ed</li>
+            <li>Rules: See below, and click the events for more details</li>
+    </ul>
+     </div>
+
+       <!-- SNHCVB Tournament Description Description -->
+        <div class="about-league">
+            <h3>About SNHCVB Tournaments:</h3>
+            <p>Southern New Hampshire Competitive Volleyball (SNHCVB) runs independently organized co-ed tournaments at Girls Inc. of NH in Nashua. Our tournaments follow a unique rating system that closely mirrors the Yankee Volleyball Association’s scale, ensuring fair and competitive play for all participants.
+Unique Rating System
+At SNHCVB, we use a customized rating scale to balance team compositions. Our ratings range from Expert Plus (XP), equivalent to a Yankee A- player, down to Novice Plus (NP), which mirrors a Yankee C-. This system ensures that teams remain competitive while accommodating players of varying skill levels. 
+Co-Ed Format and Team Requirements
+Our tournaments use a co-ed format, meaning both men and women are allowed to block and spike in the front row, which adds an exciting level of strategy to the game. Each team must have a minimum of six players, and there must always be at least two ladies on the court at all times. Teams can have up to nine players total, allowing flexibility for substitutions.
+Rules and Structure
+SNHCVB tournaments adhere to the official USA Volleyball (USAV) rules, with matches played to 21 points and each round consisting of two games. The top three teams will enter the playoffs, with the first-seed team receiving a bye in the first round.
+By maintaining a co-ed environment and enforcing balanced team compositions, we ensure competitive, enjoyable matches for all participants.
+</p>
+        </div>
+
+        <!-- Event Information -->
+           <!-- Event Information (Mustache.js template placeholder) -->
+        <div id="events-container"></div> <!-- Mustache will render the events here -->
+    </section>
+    </main>
+
+    <!-- Footer Section -->
+     <footer>
+        <p>Southern New Hampshire Competitive Volleyball © 2024</p>
+    </footer>
+     <script>
+        var template = `
+            {{#events}}
+                <div class="event">
+                    {{#title}}<a href="{{link}}" target="_blank">{{title}}</a>{{/title}}
+                    {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
+                    {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
+                    {{#description}}<p>{{description}}</p>{{/description}}
+                </div>
+            {{/events}}
+        `;
+
+        var data = {
+            events: [
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                },
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                },
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                },
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                }
+            ]
+        };
+
+        var rendered = Mustache.render(template, data);
+        document.getElementById('events-container').innerHTML = rendered;
+    </script>
+</body>
+</html>

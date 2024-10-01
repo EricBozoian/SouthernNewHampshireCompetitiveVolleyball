@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern NH Competitive Volleyball - League</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+<script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
+        <h1>Southern New Hampshire Competitive Volleyball</h1>
+        <p>A place for competitive volleyball</p>
+                <a href="All Events.html">
+    <button class="btn">All Events</button>
+</a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="League.html">League</a></li>
+           <li><a href="#">Tournaments</a>
+                <ul class="dropdown">
+                    <li><a href="yankee-tournaments.html">Yankee Tournaments</a></li>
+                    <li><a href="SNHCVB-Tournaments.html">SNHCVB Tournaments</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Indoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Co-ed Drop-in Nights.html">Weeknight Co-ed</a></li>
+                    <li><a href="RCO Drop-in Nights.html">Weeknight RCO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Outdoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Grass Drop-in.html">Weeknight Grass</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Sponsors.html">Sponsors</a></li>
+        </ul>
+    </nav>
+
+<!-- League Section -->
+<section class="league">
+     <h2>{{eventTitle}}</h2>
+    <img src="indoor event banner 1600x800.png" alt="League Action">
+    <br> <!-- Add break after the image -->
+    <!-- Button wrapped inside an anchor tag to redirect to the form link -->
+    <a href="{{signupLink}}" target="_blank">
+        <button class="btn">Sign Up Here</button>
+    </a> <!-- Closing anchor tag here -->
+</section>
+
+    <h1 class="c16" id="h.hfwoghfugl8m">
+      <span class="c5 c18 c20">{{eventTitle}}</span>
+    </h1>
+
+    <p class="c1">
+      <span class="c0">{{eventDateTime}}</span>
+    </p>
+    <p class="c1">
+      <span class="c0">{{eventLocation}}</span>
+    </p>
+    <p class="c1">
+      <span class="c0">{{eventCity}}</span>
+    </p>
+
+    <h2 class="c12" id="h.pvmrdnhgqzfa">
+      <span class="c3">Event description</span>
+    </h2>
+
+    <p class="c1 c11">
+      <span class="c5 c4"></span>
+    </p>
+
+    <p class="c1">
+      <span class="c4">&#128064; &#128073; Click </span>
+      <span class="c9 c25">
+        <a class="c10" href="{{signupListLink}}">HERE</a>
+      </span>
+      <span class="c5 c4"> to check out who’s signed up so far! &#128064;</span>
+    </p>
+
+    <p class="c1 c11">
+      <span class="c5 c4"></span>
+    </p>
+</section>
+	       <!-- Volleyball Drop-In Game Format -->
+<div class="about-league">
+   <h3>Volleyball Drop-In Game Format:</h3>
+   <p>
+      Signup Process:
+
+Players click the signup button and choose a position on one of the three available teams.
+Players pay based on their insurance status:
+$15.50 for players without insurance or $12 for those with insurance. The $3.50 insurance fee is for our liability insurance to play at girls inc and is only once a year.
+For more information on ticket prices, see the section below.
+Team Balancing:
+
+Eric (the host) will review the teams prior to the event and make any necessary adjustments to ensure balance.
+Event Day Schedule:
+
+Warm-Up (30 minutes):
+Includes hitting drills, passing, and general warm-up exercises.
+Game Play:
+Teams that arrive on time and are complete will play first.
+The team that is incomplete or arrives late will act as the referee for the first game.
+Rotation Rules:
+
+The losing team leaves the court and referees the next match.
+The refereeing team will replace the losing team.
+After a team plays two consecutive matches, they will rotate off and referee.
+This rotation continues with one team always refereeing.
+Adjustments:
+
+Eric may make on-the-fly adjustments if the teams appear to be unbalanced during gameplay.
+   </p>
+</div>   
+   <!-- SKILL REQUIREMENT Description -->
+<div class="about-league">
+   <h3>SKILL REQUIREMENT:</h3>
+   <p>
+      <span class="emoji">&#9888;&#65039; </span> <!-- Emoji at the beginning -->
+      This event is not for beginners. This event is for experienced players with decent skills.
+      As a reminder, you will certify that you meet the following skill requirements when you register:
+      <span class="emoji">&#9888;&#65039; </span> <!-- Emoji at the end -->
+   </p>
+<div
+     <!-- Required Skills -->
+     <div class="info-box">
+    <h3>Required Skills:</h3>
+    <ul>
+        <li>Passing:</li>
+	<li> Reliable with fewer errors and better control.</li>
+	<li>Hitting:</li>
+	<li>Consistent with power and accuracy. You should be a reliable attacker.</li>
+	<li>Rotations (5-1 & 6-2):</li>
+	<li>You should have a solid understanding of volleyball rotations, rarely make positional errors, and grasp strategic elements of the game.</li>
+	<li>Ball Placement:</li>
+	<li>Start showing consistency and strategic placement in your plays.</li>
+	<li>Blocking:</li>
+	<li>Achieve moderate success and show developing skills.</li>
+	<li>Age Requirement:</li>
+	<li> All players must be 18 years of age or older.</li>
+    </ul>
+     </div>
+    <p class="c1">
+      <span class="c0">These requirements are crucial to ensure the safety, enjoyment, and competitive balance of our games.</span>
+    </p>
+    <div class="about-league">
+   <h3>Important:</h3>
+   <p>
+      <span class="emoji">&#9888;&#65039; </span> <!-- Emoji at the beginning -->If during the game it becomes apparent that you do not meet these stated requirements, you will be asked to leave without a refund. This policy is in place to maintain the integrity of the event and ensure that all participants have a fair and enjoyable experience.
+      <span class="emoji">&#9888;&#65039; </span> <!-- Emoji at the end -->
+   </p>
+	    <!-- Ticket Options -->
+     <div class="info-box">
+    <h3>Ticket Options:</h3>
+    <ul>
+        <li>Game Ticket + Yearly Insurance Bundle:</li>
+	<li> $15.50</li>
+	<li>Returning Player with Insurance Purchased:</li>
+	<li>$12.00.</li>
+    </ul>
+     </div>
+      <!-- Ticket Options Explained -->
+<div class="about-league">
+   <h3>Ticket Options Explained:</h3>
+   <p>
+      If you have not yet paid the $15.50 yearly insurance fee, you have not fulfilled the insurance requirement to play at Girls Inc. of New Hampshire (Nashua). The insurance fee is a one-time, annual payment. If you've already paid it, you do not need to pay again until the year has passed. If you have not purchased this insurance, please pay $15.50, which includes the required insurance fee.
+   </p>
+</div>
+    <p class="c1 c11">
+      <span class="c5 c4"></span>
+    </p>
+ <!-- Important Information Section -->
+     <div class="info-box">
+    <h3>Important:</h3>
+    <ul>
+        <li>24-Hour Payment Window</li>
+        <li>Payments must be received within 24 hours of signing up for the event. A $5 late fee will be added for late payments.</li>
+	<li>Payments are required before the event starts. Selecting a ticket just before the event without immediate payment will incur a $5 late fee.</li>
+    </ul>
+     </div>
+    <p class="c1">
+      <span class="c5 c4">If you are going to be late, please message the host when you expect to arrive.</span>
+    </p>
+    <p class="c1">
+      <span class="c5 c4">Exciting Prizes at Every Event!</span>
+    </p>
+    <p class="c1">
+      <span class="c0">&#127921; Number Draw: At each event, we&rsquo;ll randomly draw three ping pong balls, each marked with a number. Every participant&#39;s name on the team sign-in sheet has a corresponding number. If your number is drawn, you&rsquo;ll get the chance to play our Plinko game!</span>
+    </p>
+    <p class="c1">
+      <span class="c0">&#127920; Plinko Game: Those whose numbers are drawn will drop a chip in our Plinko board to determine their prize. The board has slots for copper, silver, and gold cards, each representing a different points</span>
+    </p>
+    <p class="c1">
+      <span class="c0">&#129351;Gold Card: 3 points</span>
+    </p>
+    <p class="c1">
+      <span class="c0">&#129352;Silver Card: 2 points</span>
+    </p>
+    <p class="c1">
+      <span class="c0">&#129353;Copper Card: 1 point</span>
+    </p>
+    <p class="c1">
+      <span class="c0">&#129351; Tier 1 Prizes(6+ points): Hoodies (6 points), Backpacks (8 points), Pro Volleyballs (Molten Balls 10 points, Wilson Balls 12 points) Balls are subject to availability</span>
+    </p>
+    <p class="c1">
+      <span class="c0">&#129352; Tier 2 Prizes (2 points): Water Bottles, Drawstring Bags, T-Shirts, Switch Teams Card: Allows the player to switch to any team they want during the session (expires after two uses, limit one per player). Switch Position Card: Allows the player to switch to any position they want during the session (expires after two uses, limit one per player).</span>
+    </p>
+    <p class="c1">
+      <span class="c0">&#129353; Tier 3 Prizes(1 point): Sunglasses, Stickers, Jibbitz, No Ref Card: Allows the player to skip reffing duties for an entire session (expires after two uses, limit one per player)</span>
+    </p>
+    <p class="c1">
+      <span class="c0">Special Benefits for Middle Players:</span>
+    </p>
+    <ul class="c15 lst-kix_oq5b838s91vu-0 start">
+      <li class="c1 c2 li-bullet-0">
+        <span class="c0">Middle Draw: The first of the three ping pong balls will only be the middle players. After this draw, the selected middle&rsquo;s ball is removed, and the remaining middle balls are added back into the pool for the final two draws.</span>
+      </li>
+      <li class="c1 c2 li-bullet-0">
+        <span class="c0">Bonus Ball: If the special bonus ball is drawn, all middle players present receive either 1 point or a Tier 1 prize of their choice!</span>
+      </li>
+    </ul>
+    <p class="c1">
+      <span class="c0">Important Details:</span>
+    </p>
+    <ul class="c15 lst-kix_5apj3lqvrodu-0 start">
+      <li class="c1 c2 li-bullet-0">
+        <span class="c0">Prize Redemption: Points accumulate based on the cards you land on. For example, landing on a gold card earns you 3 points. You can redeem your points for prizes, such as a Backpack (8 points), an Indoor Molten Volleyball (10 points), or a Grass Wilson Volleyball (12 points).</span>
+      </li>
+      <li class="c1 c2 li-bullet-0">
+        <span class="c0">Monthly Cap: To keep things fair and exciting, only 2 Tier 1 prizes can be redeemed each month.</span>
+      </li>
+      <li class="c1 c2 li-bullet-0">
+        <span class="c0">Cool-Down Period: Once you redeem any prize, you enter a 4-week cool-down period where you can&rsquo;t accumulate points, giving everyone a fair chance to win.</span>
+      </li>
+    </ul>
+    <p class="c1">
+      <span class="c7">For more details about the raffle and prize rules, click here: </span>
+    </p>
+    <p class="c1">
+      <span class="c8 c17">
+        <a class="c10" href="https://www.google.com/url?q=https://docs.google.com/document/d/12FXVNoqfyLXS7i8s15GFFA7N6ky46lJw2nkjEytVDO8/edit?usp%3Dsharing&amp;sa=D&amp;source=editors&amp;ust=1727364606619803&amp;usg=AOvVaw3gV4n4CGqNOiEzf-olWa_3">https://docs.google.com/document/d/12FXVNoqfyLXS7i8s15GFFA7N6ky46lJw2nkjEytVDO8/edit?usp=sharing</a>
+      </span>
+    </p>
+    <p class="c1 c11">
+      <span class="c9">
+        <a class="c10" href="https://www.google.com/url?q=https://docs.google.com/document/d/12FXVNoqfyLXS7i8s15GFFA7N6ky46lJw2nkjEytVDO8/edit?usp%3Dsharing&amp;sa=D&amp;source=editors&amp;ust=1727364606619996&amp;usg=AOvVaw3w8AwOZECYB_A2iFmv4BK7">
+          <br>
+        </a>
+      </span>
+    </p>
+   <!-- SKILL REQUIREMENT Description -->
+<div class="about-league">
+   <h3>Important:</h3>
+   <p>
+      <span class="emoji">&nbsp;&#127952; </span> <!-- Emoji at the beginning -->
+      One-Time Skill Rating Form for Balanced Teams. To ensure a fun and fair experience for everyone, we've introduced a one-time Skill Rating Form This form is crucial for us to accurately assess your skill level and create balanced teams. Please Fill Out Before Your First Game.
+      <span class="emoji">&nbsp;&#127952; </span> <!-- Emoji at the end -->
+   </p>
+<div
+    <ul class="c15 lst-kix_1uo4ogkis14k-0 start">
+      <li class="c1 c2 li-bullet-0">
+        <span class="c7">Access the Form Here:</span>
+      </li>
+      <li class="c1 c2 li-bullet-0">
+        <span class="c8 c17">
+          <a class="c10" href="https://www.google.com/url?q=https://forms.gle/EK5Xrrr8z868VGnf9&amp;sa=D&amp;source=editors&amp;ust=1727364606621196&amp;usg=AOvVaw1ZCjXIsYdupEVdTw5w7wj1">&nbsp;Skill Rating Form</a>
+        </span>
+      </li>
+         <!-- Time Investment Description -->
+<div class="about-league">
+   <h3>Why It's Important:</h3>
+   <p>
+      Your responses will help us match you with players of similar skill levels, enhancing the competitiveness and enjoyment of every game.This form needs to be filled out only once.
+   </p>
+<div
+    <p class="c1">
+    <h3>Refund and Transfer Policy:</h3>
+    </p>
+    <p class="c1">
+      <span class="c8 c17">
+        <a class="c10" href="https://www.google.com/url?q=https://docs.google.com/document/d/1-1xzc6Qmn6KYN9op3AvVKrZ9y93qRt90D8smpNbxJhU/edit?usp%3Dsharing&amp;sa=D&amp;source=editors&amp;ust=1727364606622900&amp;usg=AOvVaw25A5c4rSasnahCBAnLfdKC">https://docs.google.com/document/d/1-1xzc6Qmn6KYN9op3AvVKrZ9y93qRt90D8smpNbxJhU/edit?usp=sharing</a>
+      </span>
+    </p>
+    <p class="c1">
+      <h3>No Credit for missed Games:</h3>
+    </p>
+    <p class="c1">
+      <span class="c8 c17">
+        <a class="c10" href="https://www.google.com/url?q=https://docs.google.com/document/d/1rHtW8vtgBO0RO4uGoxoW5CaU39aokNHGP4kdktI3KyM/edit?usp%3Dsharing&amp;sa=D&amp;source=editors&amp;ust=1727364606623204&amp;usg=AOvVaw3zaZ_RsvIbm3xfWiiJD-YH">https://docs.google.com/document/d/1rHtW8vtgBO0RO4uGoxoW5CaU39aokNHGP4kdktI3KyM/edit?usp=sharing</a>
+      </span>
+    </p>
+    <p class="c1">
+      <h3>Indemnification:</h3>
+    </p>
+    <p class="c1">
+      <span class="c8 c17">
+        <a class="c10" href="https://www.google.com/url?q=https://docs.google.com/document/d/1vjQMpCwiTbV8FLGAkhTmxNE2gQANvzLGWXazMhbpCQc/edit?usp%3Dsharing&amp;sa=D&amp;source=editors&amp;ust=1727364606623484&amp;usg=AOvVaw3UOUDNTUpcHKV-LoA2bOCp">https://docs.google.com/document/d/1vjQMpCwiTbV8FLGAkhTmxNE2gQANvzLGWXazMhbpCQc/edit?usp=sharing</a>
+      </span>
+    </p>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; Southern New Hampshire Competitive Volleyball © 2024</p>
+    </footer>
+
+<!-- Mustache.js Rendering Script -->
+<script>
+    // Define the data object
+    const data = {
+        eventTitle: "10/10 Indoor Volleyball at Girls Inc of New Hampshire (Nashua), $12 3hrs",
+        signupLink: "https://forms.gle/2KzoWqSVoVt2QChD8",
+        eventDateTime: "Thu, Oct 10, 5:45pm - 9pm EDT",
+        eventLocation: "Girls Inc of New Hampshire",
+        eventCity: "Nashua, United States",
+        signupListLink: "https://docs.google.com/spreadsheets/d/1irAI3wmiGnXq9WwMsXKI3iJRV8ZLw97Gr3HXRVWvlGg/edit?usp=sharing"
+    };
+        // Get the HTML content that will be used as a template
+        const template = document.body.innerHTML;
+
+        // Render the template by merging it with the data object
+        const rendered = Mustache.render(template, data);
+
+        // Replace the body content with the rendered HTML
+        document.body.innerHTML = rendered;
+    </script>
+</body>
+</html

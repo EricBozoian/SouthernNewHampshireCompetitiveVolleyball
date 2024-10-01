@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Southern New Hampshire Competitive Volleyball</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+ <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script> <!-- Mustache.js -->
+</head>
+<body>
+    <!-- Header Section with Logo and Title -->
+    <header>
+        <img src="SNHCVB-app-192x192.png" alt="Southern New Hampshire Competitive Volleyball Logo" class="logo">
+        <h1>Southern New Hampshire Competitive Volleyball</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+        <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="League.html">League</a></li>
+            <li><a href="#">Tournaments</a>
+                <ul class="dropdown">
+                    <li><a href="yankee-tournaments.html">Yankee Tournaments</a></li>
+                    <li><a href="SNHCVB-Tournaments.html">SNHCVB Tournaments</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Indoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Co-ed Drop-in Nights.html">Weeknight Co-ed</a></li>
+                    <li><a href="RCO Drop-in Nights.html">Weeknight RCO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Outdoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Grass Drop-in.html">Weeknight Grass</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Sponsors.html">Sponsors</a></li>
+        </ul>
+    </nav>
+   <!-- All Events Section -->
+    <section class="league">
+        <h2>All Events</h2>
+        <div id="events-container"></div> <!-- Mustache will render the events here -->
+    </section>    <!-- Footer Section -->
+    <footer>
+        <p>&copy; Southern New Hampshire Competitive Volleyball © 2024</p>
+    </footer>
+ <!-- Mustache.js Script to Render Events -->
+    <script>
+        var template = `
+            {{#events}}
+                <div class="event">
+                    {{#title}}<a href="{{link}}" target="_blank">{{title}}</a>{{/title}}
+                    {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
+                    {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
+                    {{#description}}<p>{{description}}</p>{{/description}}
+                </div>
+            {{/events}}
+        `;
+
+var data = {
+    events: [
+        { title: "10/03 Indoor Volleyball at Girls Inc of New Hampshire", date: "10/03/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://ericbozoian.github.io/SNHCVB-staging/10-03%20Indoor%20Volleyball%20at%20Girls%20Inc%20of%20New%20Hampshire.html", description: "$12 for 3 hours of play, 5:45 PM - 9 PM" },
+        { title: "10/10 Indoor Volleyball at Girls Inc of New Hampshire", date: "10/10/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://ericbozoian.github.io/SNHCVB-staging/10-10%20co-ed%20drop%20in%2009-28.html", description: "$12 for 3 hours of play, 5:45 PM - 9 PM" },
+        { title: "10/17 Indoor Volleyball at Girls Inc of New Hampshire", date: "10/17/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://ericbozoian.github.io/SNHCVB-staging/10-17%20co-ed%20drop%20in%2009-28.html", description: "$12 for 3 hours of play, 5:45 PM - 9 PM" },
+        { title: "10/24 Indoor Volleyball at Girls Inc of New Hampshire", date: "10/24/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://ericbozoian.github.io/SNHCVB-staging/10-24%20co-ed%20drop%20in%20temp%2009-28.html", description: "$12 for 3 hours of play, 5:45 PM - 9 PM" },
+        { title: "10/26 Yankee Women's C+ Tournament", date: "10/26/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://ericbozoian.github.io/SNHCVB-staging/10-26%20Yankee%20Tournament%20template%2009-29.html", description: "$195 per team, 5 teams, 9 AM - 6 PM" },
+        { title: "10/31 Indoor Volleyball at Girls Inc of New Hampshire", date: "10/31/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://ericbozoian.github.io/SNHCVB-staging/10-31%20co-ed%20drop%20in%20temp%2009-28.html", description: "$12 for 3 hours of play, 5:45 PM - 9 PM" },
+        { title: "11/08 RCO Drop-In", date: "11/08/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://ericbozoian.github.io/SNHCVB-staging/10-04%20RCO-Drop-In-temp-09-28.html", description: "$12 for 3 hours of play, 5:45 PM - 9 PM" },
+        { title: "11/22 RCO Drop-In", date: "11/22/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://ericbozoian.github.io/SNHCVB-staging/10-25%20RCO-Drop-In-temp-09-28.html", description: "$12 for 3 hours of play, 5:45 PM - 9 PM" },
+        { title: "", date: "", location: "", link: "", description: "" },
+        { title: "", date: "", location: "", link: "", description: "" },
+        { title: "", date: "", location: "", link: "", description: "" },
+        { title: "", date: "", location: "", link: "", description: "" },
+        { title: "", date: "", location: "", link: "", description: "" },
+        { title: "", date: "", location: "", link: "", description: "" },
+        { title: "", date: "", location: "", link: "", description: "" },
+        { title: "", date: "", location: "", link: "", description: "" },
+        { title: "", date: "", location: "", link: "", description: "" },
+        { title: "", date: "", location: "", link: "", description: "" }
+    ]
+};
+        var rendered = Mustache.render(template, data);
+        document.getElementById('events-container').innerHTML = rendered;
+    </script>
+</body>
+</html>

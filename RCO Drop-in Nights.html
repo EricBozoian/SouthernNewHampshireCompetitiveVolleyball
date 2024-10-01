@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern NH Competitive Volleyball - League</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script> <!-- Mustache.js included -->
+</head>
+<body>
+    <header>
+        <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
+        <h1>Southern New Hampshire Competitive Volleyball</h1>
+        <p>A place for competitive volleyball</p>
+                <a href="All Events.html">
+    <button class="btn">All Events</button>
+</a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="League.html">League</a></li>
+           <li><a href="#">Tournaments</a>
+                <ul class="dropdown">
+                    <li><a href="yankee-tournaments.html">Yankee Tournaments</a></li>
+                    <li><a href="SNHCVB-Tournaments.html">SNHCVB Tournaments</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Indoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Co-ed Drop-in Nights.html">Weeknight Co-ed</a></li>
+                    <li><a href="RCO Drop-in Nights.html" class="active">Weeknight RCO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Outdoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Grass Drop-in.html">Weeknight Grass</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Sponsors.html">Sponsors</a></li>
+        </ul>
+    </nav>
+
+    <!-- RCO Drop-in Nights main page -->
+    <section class="league">
+        <h2>RCO Drop-in Nights</h2>
+        <img src="RCO-Drop-In -800x400.png" alt="League Action" 
+        
+        <!-- Important Information Section -->
+     <div class="info-box">
+    <h3>Important Information:</h3>
+    <ul>
+        <li>Cost: $12</li>
+        <li>How to sign up: Click the links below</li>
+        <li>Registration deadlines: 1pm the day of the event</li>
+            <li>Format: 6v6 RCO</li>
+            <li>Rules: Click on event for details</li>
+    </ul>
+     </div>
+
+       <!-- RCO Drop-in Nights Description -->
+        <div class="about-league">
+            <h3>About RCO Drop-in Nights:</h3>
+            <p>Experience the fun and competitive atmosphere of Reverse Co-Ed (RCO) Volleyball with Southern New Hampshire Competitive Volleyball (SNHCVB). Our RCO events are designed to offer a unique twist to traditional volleyball, where women dominate the front row and men focus on back-row attacks and defense.
+
+What is RCO Volleyball?
+In RCO volleyball, women play at the net, handling the attacks and blocks, while men play from the back row, focusing on passing and back-row hitting. This setup makes for a dynamic and exciting game that offers a different kind of challenge for both men and women. The net is set at women’s height to give women the chance to showcase their skills at the front row while men must stay behind the 3-meter line for their attacks.
+
+Event Format
+Teams: Each team typically consists of three men and three women, but variations may occur depending on the number of participants.
+Rotation: Players rotate in a standard pattern, but men stay in the back row while women remain up front for attacking and blocking.
+Game Play: The matches are competitive yet fun, ensuring all participants enjoy the format and get plenty of playtime.
+Skill Requirements
+These events are not for beginners. All participants must meet a certain level of skill to ensure the games remain competitive and balanced. You should be comfortable with:
+
+Passing and hitting with consistent accuracy and control.
+Strong understanding of volleyball rotations (5-1 and 6-2).
+Ball placement and strategic thinking in attack and defense.
+Players who do not meet the required skill level may be asked to leave in order to maintain the competitive balance.
+
+Registration and Fees
+$12 per player with yearly insurance already purchased.
+$15.50 per player for those without insurance, which includes a one-time annual insurance fee.
+Payments are due within 24 hours of registration to secure your spot, with a $5 late fee for any payments made after the deadline.
+Join the Fun
+Our RCO volleyball events are a great way to test your skills in a different format, meet new players, and enjoy competitive volleyball. Whether you’re a seasoned player or just looking for a new challenge, RCO is a fun and fast-paced way to elevate your volleyball game.</p>
+        </div>
+
+        <!-- Event Information (Mustache.js template placeholder) -->
+        <div id="events-container"></div> <!-- Mustache will render the events here -->
+    </section>
+
+    <!-- Footer Section -->
+     <footer>
+        <p>Southern New Hampshire Competitive Volleyball © 2024</p>
+    </footer>
+     <script>
+        var template = `
+            {{#events}}
+                <div class="event">
+                    {{#title}}<a href="{{link}}" target="_blank">{{title}}</a>{{/title}}
+                    {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
+                    {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
+                    {{#description}}<p>{{description}}</p>{{/description}}
+                </div>
+            {{/events}}
+        `;
+
+        var data = {
+            events: [
+                {
+        title: "RCO Indoor Volleyball at Girls Inc of New Hampshire",
+        date: "Thu, Nov 8, 5:45pm - 9pm EDT",
+        location: "Girls Inc of New Hampshire, Nashua, United States",
+        link: "https://ericbozoian.github.io/SNHCVB-staging/10-04%20RCO-Drop-In-temp-09-28.html",
+        description: "Join us for a fun and competitive RCO (Reverse Co-Ed) indoor volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). In this format, women play at the front row for attacking and blocking, while men play in the back row focusing on defense. Warm-up starts at 5:45 PM, followed by gameplay. This event is for experienced players only. Click the event header for more details and sign-up information."
+    },
+               {
+        title: "RCO Indoor Volleyball at Girls Inc of New Hampshire",
+        date: "Fri, Nov 22, 5:45pm - 9pm EDT",
+        location: "Girls Inc of New Hampshire, Nashua, United States",
+        link: "https://ericbozoian.github.io/SNHCVB-staging/10-25%20RCO-Drop-In-temp-09-28.html",
+        description: "Join us for a fun and competitive RCO (Reverse Co-Ed) indoor volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). In this format, women play in the front row for attacking and blocking, while men play in the back row focusing on defense. Warm-up starts at 5:45 PM, followed by gameplay. This event is for experienced players only. Click the event header for more details and sign-up information."
+    },
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                },
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                },
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                }
+            ]
+        };
+
+        var rendered = Mustache.render(template, data);
+        document.getElementById('events-container').innerHTML = rendered;
+    </script>
+</body>
+</html>

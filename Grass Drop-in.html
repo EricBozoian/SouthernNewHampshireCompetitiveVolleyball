@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern NH Competitive Volleyball - League</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script> <!-- Mustache.js included -->
+</head>
+<body>
+    <header>
+        <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
+        <h1>Southern New Hampshire Competitive Volleyball</h1>
+        <p>A place for competitive volleyball</p>
+              <a href="All Events.html">
+    <button class="btn">All Events</button>
+</a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="League.html">League</a></li>
+           <li><a href="#">Tournaments</a>
+                <ul class="dropdown">
+                    <li><a href="yankee-tournaments.html">Yankee Tournaments</a></li>
+                    <li><a href="SNHCVB-Tournaments.html">SNHCVB Tournaments</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Indoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Co-ed Drop-in Nights.html">Weeknight Co-ed</a></li>
+                    <li><a href="RCO Drop-in Nights.html">Weeknight RCO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Outdoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Grass Drop-in.html" class="active">Weeknight Grass</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Sponsors.html">Sponsors</a></li>
+        </ul>
+    </nav>
+
+    <!-- Grass Drop-in main page -->
+    <section class="league">
+        <h2>Grass Drop-in</h2>
+        <img src="Grass Drop-In 800x400.png" alt="League Action" 
+        
+        <!-- Important Information Section -->
+     <div class="info-box">
+    <h3>Important Information:</h3>
+    <ul>
+        <li>Cost</li>
+        <li>How to sign up</li>
+        <li>Registration deadlines</li>
+            <li>Format</li>
+            <li>Rules</li>
+    </ul>
+     </div>
+
+       <!-- Grass Drop-in Description -->
+        <div class="about-league">
+            <h3>About Grass Drop-in:</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor iaculis dolor, eu mollis metus. Aliquam erat volutpat. Etiam molestie commodo tellus, at commodo odio pellentesque quis.</p>
+        </div>
+
+         <!-- Event Information (Mustache.js template placeholder) -->
+        <div id="events-container"></div> <!-- Mustache will render the events here -->
+    </section>
+
+    <!-- Footer Section -->
+     <footer>
+        <p>Southern New Hampshire Competitive Volleyball © 2024</p>
+    </footer>
+    <script>
+        var template = `
+            {{#events}}
+                <div class="event">
+                    {{#title}}<a href="{{link}}" target="_blank">{{title}}</a>{{/title}}
+                    {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
+                    {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
+                    {{#description}}<p>{{description}}</p>{{/description}}
+                </div>
+            {{/events}}
+        `;
+
+        var data = {
+            events: [
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                },
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                },
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                },
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                },
+                { 
+                    title: "", 
+                    date: "", 
+                    location: "", 
+                    link: "", 
+                    description: "" 
+                }
+            ]
+        };
+
+        var rendered = Mustache.render(template, data);
+        document.getElementById('events-container').innerHTML = rendered;
+    </script>
+</body>
+</html>
