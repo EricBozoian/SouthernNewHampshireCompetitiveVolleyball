@@ -6,7 +6,7 @@
   "background_color": "#ffffff",
   "theme_color": "#002855",
   "orientation": "portrait",
-  "scope": "/volleyball-pwa/",
+  "scope": "/SouthernNewHampshireCompetitiveVolleyball/",
   "icons": [
     {
       "src": "/SouthernNewHampshireCompetitiveVolleyball/SNHCVB-app-192x192.png",
