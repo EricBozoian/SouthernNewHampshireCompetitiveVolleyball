@@ -18,12 +18,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "splash_screens": [
-    {
-      "src": "/SouthernNewHampshireCompetitiveVolleyball/SNHCVB-app-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
   ]
 }
