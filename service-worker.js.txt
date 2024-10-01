@@ -5,7 +5,7 @@ self.addEventListener('install', function(event) {
         '/SouthernNewHampshireCompetitiveVolleyball/index.html',
         '/SouthernNewHampshireCompetitiveVolleyball/style.css',
         '/SouthernNewHampshireCompetitiveVolleyball/SNHCVB-app-192x192.png',
-        '/SouthernNewHampshireCompetitiveVolleyballa/SNHCVB-app-512x512.png',
+        '/SouthernNewHampshireCompetitiveVolleyball/SNHCVB-app-512x512.png',
         '/SouthernNewHampshireCompetitiveVolleyball/manifest.json'
       ]);
     })
