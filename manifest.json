@@ -2,6 +2,7 @@
   "name": "Southern NH Competitive Volleyball",
   "short_name": "SNHCVB",
   "start_url": "/SouthernNewHampshireCompetitiveVolleyball/index.html",
+  "id": "/SouthernNewHampshireCompetitiveVolleyball/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#002855",
