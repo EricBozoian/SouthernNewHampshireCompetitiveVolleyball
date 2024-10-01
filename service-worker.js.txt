@@ -2,11 +2,11 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('volleyball-cache').then(function(cache) {
       return cache.addAll([
-        '/volleyball-pwa/index.html',
-        '/volleyball-pwa/style.css',
-        '/volleyball-pwa/SNHCVB-app-192x192.png',
-        '/volleyball-pwa/SNHCVB-app-512x512.png',
-        '/volleyball-pwa/manifest.json'
+        '/SouthernNewHampshireCompetitiveVolleyball/index.html',
+        '/SouthernNewHampshireCompetitiveVolleyball/style.css',
+        '/SouthernNewHampshireCompetitiveVolleyball/SNHCVB-app-192x192.png',
+        '/SouthernNewHampshireCompetitiveVolleyballa/SNHCVB-app-512x512.png',
+        '/SouthernNewHampshireCompetitiveVolleyball/manifest.json'
       ]);
     })
   );
