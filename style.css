@@ -547,6 +547,24 @@ img {
   margin-bottom: 20px; /* Add some spacing below */
   font-weight: bold; /* Ensure the text is bold */
 }
+.centered-links {
+    text-align: center; /* Centers the text */
+    margin-left: auto; /* Ensures centering within container */
+    margin-right: auto; /* Ensures centering within container */
+    display: block; /* Ensures the links are treated as block elements */
+}
+
+.centered-links a {
+    font-size: 1.2em; /* Optional: Adjust the font size */
+    font-weight: bold; /* Optional: Adjust font weight */
+    color: #003366; /* Mirror existing color */
+    text-decoration: none; /* Mirror existing text decoration */
+}
+
+.centered-links a:hover {
+    text-decoration: underline; /* Adds an underline on hover */
+}
+
 
 
 
