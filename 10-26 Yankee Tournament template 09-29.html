@@ -82,6 +82,25 @@
         </span>
         <span class="c5 c4"> to check out who’s signed up so far! &#128064;</span>
     </p>
+    <div class="about-league">
+    <h3> <span class="emoji">&#9888;&#65039; </span> <!-- Emoji at the beginning -->
+      Looking to play but don’t have a team? Sign up here:
+      <span class="emoji">&#9888;&#65039; </span> <!-- Emoji at the end --></h3>
+    <div style="text-align: center !important;">
+        <p>
+            <a href="{{Freeagentsignup}}" target="_blank">
+                Free Agent Sign up
+            </a>
+        </p>
+    </div><div class="about-league">
+    <h3>Available Free Agents for Pick-Up:</h3>
+    <div style="text-align: center !important;">
+        <p>
+            <a href="{{Freeagentlist}}" target="_blank">
+                Free Agent List
+            </a>
+        </p>
+    </div>
     <!-- Yankee Tournament Format -->
 <div class="about-league">
     <h3>Please also register on the Yankee official tournament website for this tournament:</h3>
@@ -208,7 +227,7 @@
 <!-- Mustache.js Rendering Script -->
     <script>
         // Define the data object
-        const data = {
+const data = {
             eventTitle: "10/26 Yankee Women 's C+ Tournament (27points) @ Girls Inc of NH (Nashua), $185 per team, 5 teams",
             eventDateTime: "October 26th, 9:00 am - 6:00 PM EDT",
             eventLocation: "Girls Inc of New Hampshire, 27 Burke St, Nashua, NH",
@@ -216,6 +235,8 @@
             eventDescription: "Join us for an exciting volleyball tournament this October!",
             signupLink: "https://forms.gle/SoyGX49LzSdbXXoN9",
             signupListLink: "http://yankee.org/tournaments/w-c-10-26-2024",
+	    Freeagentsignup: "",
+            Freeagentlist: "",
             yankeeTournamentLink: "http://yankee.org/tournaments/w-c-10-26-2024",
             tournamentLevelDescription: "The total points of your team must equal 27. For example, you can have Three C+ players (4 points each), and Three B- players (5 points each), which equals 27. If you have any questions regarding your rating, please message the tournament director, Eric Bozoian.",
             ticketPrice: "$185",
