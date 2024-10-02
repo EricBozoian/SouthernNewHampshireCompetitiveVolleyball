@@ -548,27 +548,22 @@ img {
   font-weight: bold; /* Ensure the text is bold */
 }
 .centered-links {
-    text-align: center; /* Centers the text */
-    margin-left: auto; /* Ensures centering within container */
-    margin-right: auto; /* Ensures centering within container */
-    display: block; /* Ensures the links are treated as block elements */
+    text-align: center; /* Center the text within this container */
+    width: 100%; /* Ensures the div uses the full width available */
 }
 
 .centered-links a {
-    color: #3498db; /* Link color, matching the default blue */
-    text-decoration: underline; /* Ensures the links are underlined */
-    font-size: 1.2em; /* Optional: Adjust the font size */
-    font-weight: bold; /* Optional: Bold font */
-    display: inline-block; /* Ensures each link is treated as an inline element */
+    color: #3498db; /* Blue color for links */
+    text-decoration: underline; /* Underline to indicate clickable links */
+    font-size: 1.2em; /* Adjusted size */
+    font-weight: bold; /* Bold font */
+    display: inline; /* Set links to inline to properly center */
 }
 
 .centered-links a:hover {
-    color: #00509e; /* Darker blue for hover effect */
-    text-decoration: underline; /* Keeps the underline on hover */
+    color: #00509e; /* Darker color on hover */
+    text-decoration: underline; /* Maintain underline on hover */
 }
-
-
-
 
 
 
