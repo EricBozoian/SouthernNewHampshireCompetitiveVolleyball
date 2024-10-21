@@ -107,45 +107,45 @@ To add some extra excitement, we offer a prize system that rewards outstanding p
             {{/events}}
         `;
 
-        var data = {
-          events: [
-    {
-        title: "Indoor Volleyball at Girls Inc of New Hampshire",
-        date: "Thu, Oct 3, 5:45pm - 9pm EDT",
-        location: "Girls Inc of New Hampshire, Nashua, United States",
-        link: "https://ericbozoian.github.io/SouthernNewHampshireCompetitiveVolleyball/10-03%20Indoor%20Volleyball%20at%20Girls%20Inc%20of%20New%20Hampshire.html",
-       description: "Join us for a competitive indoor volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). Players are assigned to teams, with team balancing done prior to the event. Warm-up starts at 5:45 PM, followed by game play. This event is not for beginners; experienced players only. Click the event header to access more details and sign-up information."
-    },
-              {
-        title: "Indoor Volleyball at Girls Inc of New Hampshire",
-        date: "Thu, Oct 10, 5:45pm - 9pm EDT",
-        location: "Girls Inc of New Hampshire, Nashua, United States",
-        link: "https://ericbozoian.github.io/SouthernNewHampshireCompetitiveVolleyball/10-10%20co-ed%20drop%20in%2009-28.html",
-        description: "Join us for a competitive indoor volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). Players are assigned to teams, with team balancing done prior to the event. Warm-up starts at 5:45 PM, followed by game play. This event is not for beginners; experienced players only. Click the event header to access more details and sign-up information."
-    },
-              {
-        title: "Indoor Volleyball at Girls Inc of New Hampshire",
-        date: "Thu, Oct 17, 5:45pm - 9pm EDT",
-        location: "Girls Inc of New Hampshire, Nashua, United States",
-        link: "https://ericbozoian.github.io/SouthernNewHampshireCompetitiveVolleyball/10-17%20co-ed%20drop%20in%2009-28.html",
-        description: "Join us for a competitive indoor volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). Players are assigned to teams, with team balancing done prior to the event. Warm-up starts at 5:45 PM, followed by game play. This event is not for beginners; experienced players only. Click the event header to access more details and sign-up information."
-    },
-                {
-        title: "Indoor Co-Ed Volleyball at Girls Inc of New Hampshire",
-        date: "Thu, Oct 24, 5:45pm - 9pm EDT",
-        location: "Girls Inc of New Hampshire, Nashua, United States",
-        link: "https://ericbozoian.github.io/SouthernNewHampshireCompetitiveVolleyball/10-24%20co-ed%20drop%20in%20temp%2009-28.html",
-        description: "Join us for a fun and competitive indoor co-ed volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). Teams are assigned with balancing done prior to the event. Warm-up starts at 5:45 PM, followed by game play. This event is for experienced players only. Click the event header for more details and sign-up information."
-    },
-                 {
-        title: "Indoor Co-Ed Volleyball at Girls Inc of New Hampshire",
-        date: "Thu, Oct 31, 5:45pm - 9pm EDT",
-        location: "Girls Inc of New Hampshire, Nashua, United States",
-        link: "https://ericbozoian.github.io/SouthernNewHampshireCompetitiveVolleyball/10-31%20co-ed%20drop%20in%20temp%2009-28.html",
-        description: "Join us for a competitive indoor co-ed volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). Teams are assigned with balancing done prior to the event. Warm-up starts at 5:45 PM, followed by game play. This event is for experienced players only. Click the event header for more details and sign-up information."
-    }
-            ]
-        };
+  var data = {
+    events: [
+        {
+            title: "Indoor Co-Ed Volleyball at Girls Inc of New Hampshire",
+            date: "Thu, Oct 24, 5:45pm - 9pm EDT",
+            location: "Girls Inc of New Hampshire, Nashua, United States",
+            link: "https://ericbozoian.github.io/SouthernNewHampshireCompetitiveVolleyball/10-24%20co-ed%20drop%20in%20temp%2009-28.html",
+            description: "Join us for a fun and competitive indoor co-ed volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). Teams are assigned with balancing done prior to the event. Warm-up starts at 5:45 PM, followed by game play. This event is for experienced players only. Click the event header for more details and sign-up information."
+        },
+        {
+            title: "Indoor Co-Ed Volleyball at Girls Inc of New Hampshire",
+            date: "Thu, Oct 31, 5:45pm - 9pm EDT",
+            location: "Girls Inc of New Hampshire, Nashua, United States",
+            link: "https://ericbozoian.github.io/SouthernNewHampshireCompetitiveVolleyball/10-31%20co-ed%20drop%20in%20temp%2009-28.html",
+            description: "Join us for a competitive indoor co-ed volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). Teams are assigned with balancing done prior to the event. Warm-up starts at 5:45 PM, followed by game play. This event is for experienced players only. Click the event header for more details and sign-up information."
+        },
+        {
+            title: "",
+            date: "",
+            location: "",
+            link: "",
+            description: ""
+        },
+        {
+            title: "",
+            date: "",
+            location: "",
+            link: "",
+            description: ""
+        },
+        {
+            title: "",
+            date: "",
+            location: "",
+            link: "",
+            description: ""
+        }
+    ]
+};
 
         var rendered = Mustache.render(template, data);
         document.getElementById('events-container').innerHTML = rendered;
