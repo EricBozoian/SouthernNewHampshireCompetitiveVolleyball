@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern NH Competitive Volleyball - League</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+	<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1094855468897500');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1094855468897500&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+    <header>
+        <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
+        <h1>Southern New Hampshire Competitive Volleyball</h1>
+        <p>A place for competitive volleyball</p>
+        <a href="All Events.html">
+            <button class="btn">All Events</button>
+        </a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="League.html">League</a></li>
+           <li><a href="#">Tournaments</a>
+                <ul class="dropdown">
+                    <li><a href="yankee-tournaments.html">Yankee Tournaments</a></li>
+                    <li><a href="SNHCVB-Tournaments.html">SNHCVB Tournaments</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Indoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Co-ed Drop-in Nights.html">Weeknight Co-ed</a></li>
+                    <li><a href="RCO Drop-in Nights.html">Weeknight RCO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Drop-In Outdoor VB</a>
+                <ul class="dropdown">
+                    <li><a href="Grass Drop-in.html">Weeknight Grass</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Sponsors.html">Sponsors</a></li>
+        </ul>
+    </nav>
+
+ <!-- League Section -->
+<section class="league">
+     <h2>{{eventTitle}}</h2>
+    <img src="Tournament of South New Hampshire 1600x800.png">
+    <br> <!-- Add break after the image -->
+    <!-- Button wrapped inside an anchor tag to redirect to the form link -->
+    <a href="{{signupLink}}" target="_blank">
+        <button class="btn">Sign Up Here</button>
+    </a> <!-- Closing anchor tag here -->
+</section>
+
+   <h1 class="c16" id="h.hfwoghfugl8m">
+      <span class="c5 c18 c20">{{eventTitle}}</span>
+    </h1>
+
+    <p class="c1">
+      <span class="c0">{{eventDateTime}}</span>
+    </p>
+    <p class="c1">
+      <span class="c0">{{eventLocation}}</span>
+    </p>
+    <p class="c1">
+      <span class="c0">{{eventCity}}</span>
+    </p>
+
+    <h2 class="c12" id="h.pvmrdnhgqzfa">
+      <span class="c3">Event description</span>
+    </h2>
+
+    <p class="c1">
+        <span class="c4">&#128064; &#128073; Click </span>
+        <span class="c9 c25">
+            <a class="c10" href="{{signupListLink}}">HERE</a>
+        </span>
+        <span class="c5 c4"> to check out who’s signed up so far! &#128064;</span>
+    </p>
+    <div class="about-league">
+    <h3> <span class="emoji">&#9888;&#65039; </span>
+      Looking to play but don’t have a team? Sign up here:
+      <span class="emoji">&#9888;&#65039; </span>
+    </h3>
+    <div class="centered-links">
+        <p>
+            <a href="{{Freeagentsignup}}" target="_blank">
+                Free Agent Sign up
+            </a>
+        </p>
+    </div>
+</div>
+
+<div class="about-league">
+    <h3>Available Free Agents for Pick-Up:</h3>
+    <div class="centered-links">
+        <p>
+            <a href="{{Freeagentlist}}" target="_blank">
+                Free Agent List
+            </a>
+        </p>
+    </div>
+</div>
+
+<div class="about-league">
+    <h3>Please also register on the Yankee official tournament website for this tournament:</h3>
+    <div class="centered-links">
+        <p>
+            <a href="{{yankeeTournamentLink}}" target="_blank">
+                Yankee Tournament Registration website
+            </a>
+        </p>
+    </div>
+</div>
+</script>
+      <!-- General Rules -->
+    <div class="about-league">
+       <h3>General Rules:</h3>
+       <p>The tournament will adhere to the official rules of USA Volleyball (USAV) and follow the Yankee Volleyball Association's Rules and Policies, which can be found at http://yankee.org/about/yankee. All players are required to wear shirts with numbers visible on both the front and back. Regarding net height, {{netheight}} height standards will be applied. All participants must be at least 18 years old. New players will be evaluated by the tournament director to determine their skill level. Teams whose combined ratings exceed 27 points will be disqualified from the competition and ineligible to receive prizes. Each match will be played to 21 points, with each round consisting of two games</p>
+    </div> 
+       <!-- Prize List -->
+    <div class="about-league">
+       <h3>Prizes:</h3>
+       <p>1st place prize: choice of backpack or hoodie per player, plus a trophy for the team.<br>
+       2nd place: choice of water bottle, drawstring bag, or t-shirts per player, plus a trophy for the team.<br>
+       3rd place: choice of sunglasses, stickers, or volleyball jibbitz per player.<br>
+       After-party at Margaritas Nashua for all teams!</p>
+    </div> 
+
+    <!-- Individual Rating Scale -->
+    <div class="about-league">
+       <h3>Individual Rating Scale:</h3>
+       <p>
+          <span class="emoji">&#9888;&#65039; </span> <!-- Emoji at the beginning -->
+          This is a Yankee-sanctioned event, meaning your team must not exceed the tournament's level. Please see the Yankee rating scale below:
+          <span class="emoji">&#9888;&#65039; </span> <!-- Emoji at the end -->
+       </p>
+       <!-- Yankee Ratings -->
+       <div class="info-box">
+        <h3>Yankee Ratings:</h3>
+        <ul>
+            <li>B+: 7 points</li>
+            <li>B: 6 points</li>
+            <li>B-: 5 points</li>
+            <li>C+: 4 points</li>
+            <li>C: 3 points</li>
+            <li>C-: 2 points</li>
+        </ul>
+       </div>  
+    </div>
+
+    <!-- Tournament Level Description -->
+    <div class="about-league">
+        <h3>Important:</h3>
+        <p>
+            <span class="emoji">&#9888;&#65039; </span> <!-- Emoji at the beginning -->
+            {{tournamentLevelDescription}}
+            <span class="emoji">&#9888;&#65039; </span> <!-- Emoji at the end -->
+        </p>
+    </div>
+
+    <!-- Ticket Options -->
+    <div class="info-box">
+        <h3>Ticket Options:</h3>
+        <ul>
+            <li>{{ticketPrice}} per team (Venmo or Paypal).</li>
+        </ul>
+    </div>
+    <!-- Payment and Registration Information -->
+    <div class="about-league">
+        <h3>Payment and Registration information:</h3>
+        <p>{{ticketPrice}} per team (Venmo or Paypal). Paying directly to Eric Bozoian via Venmo ({{Venmopaymentlink}}) or PayPal ({{Paypalpaymentlink}}). Note: Ensure to enter each player's information during registration to be eligible for the tournament.</p>
+    </div>
+
+    <!-- Tournament Schedule -->
+    <div class="info-box">
+        <h3>Tournament Schedule</h3>
+        <ul>
+            <li>Round 1: Team 1 vs Team 2</li>
+            <li>Round 2: Team 3 vs Team 4</li>
+            <li>Round 3: Team 1 vs Team 5</li>
+            <li>Round 4: Team 2 vs Team 3</li>
+            <li>Round 5: Team 4 vs Team 5</li>
+            <li>Round 6: Team 1 vs Team 3</li>
+            <li>Round 7: Team 2 vs Team 4</li>
+            <li>Round 8: Team 3 vs Team 5</li>
+            <li>Round 9: Team 1 vs Team 4</li>
+            <li>Round 10: Team 2 vs Team 5</li>
+        </ul>
+    </div>
+
+    <!-- Playoffs -->
+    <div class="about-league">
+       <h3>Playoffs:</h3>
+       <p>Top three teams enter playoffs, the top team gets a bye in the first round and plays the winner of the first playoff round.</p>
+    </div>
+
+    <!-- Cancellation Policy -->
+    <div class="about-league">
+       <h3>Cancellation Policy:</h3>
+       <p>You may cancel up to 21 days before the tournament for a full refund. You will get a full refund after 21 days only if the tournament is full and your team is replaced.</p>
+    </div>
+
+    <!-- Weather Cancellation Policy -->
+    <div class="about-league">
+       <h3>Weather Cancellation Policy:</h3>
+       <p>Tournament Cancellation due to weather or other unforeseen circumstances will be decided by 6:30 a.m. on the day of the tournament. All captains will be emailed at whatever contact information they provide. If captains do not have weekend e-mail access, please let Eric know in advance.</p>
+    </div>
+
+    <!-- Tournament Director -->
+    <div class="about-league">
+       <h3>Tournament Director:</h3>
+       <p>Eric Bozoian, contact at <a href="mailto:Eric.Bozoian@gmail.com">Eric.Bozoian@gmail.com</a></p>
+    </div>
+
+    <!-- Additional Links -->
+    <div class="about-league">
+       <h3>Indemnification:</h3>
+       <p>
+          <a href="https://docs.google.com/document/d/1vjQMpCwiTbV8FLGAkhTmxNE2gQANvzLGWXazMhbpCQc/edit?usp=sharing" target="_blank">All participants must agree to this Indemnification</a>
+       </p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; Southern New Hampshire Competitive Volleyball © 2024</p>
+    </footer>
+<!-- Mustache.js Rendering Script -->
+    <script>
+        // Define the data object
+const data = {
+            eventTitle: "01/25 SNHCVB 's Tournament @ Girls Inc of NH (Nashua), $165 per team, 5 teams",
+            eventDateTime: "January 25, 9:00 am - 6:00 PM EDT",
+            eventLocation: "Girls Inc of New Hampshire, 27 Burke St, Nashua, NH",
+            eventCity: "Nashua, NH",
+            eventDescription: "Join us for an exciting volleyball tournament this January!",
+            signupLink: "",
+            signupListLink: "",
+	    Freeagentsignup: "",
+            Freeagentlist: "",
+            yankeeTournamentLink: "http://yankee.org/tournaments/w-c-10-26-2024",
+            tournamentLevelDescription: "The total points of your team must equal 27. For example, you can have Three C+ players (4 points each), and Three B- players (5 points each), which equals 27. If you have any questions regarding your rating, please message the tournament director, Eric Bozoian.",
+            ticketPrice: "$185",
+            netheight: "Women's",
+            Venmopaymentlink: "@SNHCVB",
+            Paypalpaymentlink: "https://paypal.me/SNHCVB?country.x=US&locale.x=en_US",
+        };
+
+        // Get the HTML content that will be used as a template
+        const template = document.body.innerHTML;
+
+        // Render the template by merging it with the data object
+        const rendered = Mustache.render(template, data);
+
+        // Replace the body content with the rendered HTML
+        document.body.innerHTML = rendered;
+    </script>
+</body>
+</html
