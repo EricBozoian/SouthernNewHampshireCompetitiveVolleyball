@@ -258,31 +258,33 @@ src="https://www.facebook.com/tr?id=1094855468897500&ev=PageView&noscript=1"
     </footer>
 <!-- Mustache.js Rendering Script -->
     <script>
-        // Define the data object
-const data = {
-            eventTitle: "01/25 SNHCVB 's Tournament @ Girls Inc of NH (Nashua), $165 per team, 5 teams",
-            eventDateTime: "January 25, 9:00 am - 6:00 PM EDT",
-            eventLocation: "Girls Inc of New Hampshire, 27 Burke St, Nashua, NH",
-            eventCity: "Nashua, NH",
-            eventDescription: "Join us for an exciting volleyball tournament this January!",
-            signupLink: "",
-            signupListLink: "",
-	    Freeagentsignup: "",
-            Freeagentlist: "",
-            ticketPrice: "$185",
-            netheight: "Women's",
-            Venmopaymentlink: "@SNHCVB",
-            Paypalpaymentlink: "https://paypal.me/SNHCVB?country.x=US&locale.x=en_US",
-        };
+    // Define the data object
+    const data = {
+        eventTitle: "01/25 SNHCVB 's Tournament @ Girls Inc of NH (Nashua), $165 per team, 5 teams",
+        eventDateTime: "January 25, 9:00 am - 6:00 PM EDT",
+        eventLocation: "Girls Inc of New Hampshire, 27 Burke St, Nashua, NH",
+        eventCity: "Nashua, NH",
+        eventDescription: "Join us for an exciting volleyball tournament this January!",
+        signupLink: "",
+        signupListLink: "",
+        Freeagentsignup: "https://example.com/free-agent-signup", // Replace with actual URL
+        Freeagentlist: "https://example.com/free-agent-list", // Replace with actual URL
+        captainSignupLink: "https://example.com/captain-signup", // Replace with actual URL
+        teamsInNeedLink: "https://example.com/teams-in-need", // Replace with actual URL
+        ticketPrice: "$185",
+        netheight: "Women's",
+        Venmopaymentlink: "@SNHCVB",
+        Paypalpaymentlink: "https://paypal.me/SNHCVB?country.x=US&locale.x=en_US",
+    };
 
-        // Get the HTML content that will be used as a template
-        const template = document.body.innerHTML;
+    // Get the HTML content that will be used as a template
+    const template = document.body.innerHTML;
 
-        // Render the template by merging it with the data object
-        const rendered = Mustache.render(template, data);
+    // Render the template by merging it with the data object
+    const rendered = Mustache.render(template, data);
 
-        // Replace the body content with the rendered HTML
-        document.body.innerHTML = rendered;
-    </script>
+    // Replace the body content with the rendered HTML
+    document.body.innerHTML = rendered;
+</script>
 </body>
 </html
