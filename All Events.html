@@ -54,31 +54,39 @@
   <p>&#10013; With God all things are possible.</p>
 </footer>
  <!-- Mustache.js Script to Render Events -->
-    <script>
-        var template = `
-            {{#events}}
-                <div class="event">
-                    {{#title}}<a href="{{link}}" target="_blank">{{title}}</a>{{/title}}
-                    {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
-                    {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
-                    {{#description}}<p>{{description}}</p>{{/description}}
-                </div>
-            {{/events}}
-        `;
+   <script>
+    var template = `
+        {{#events}}
+            <div class="event">
+                {{#title}}<a href="{{link}}" target="_blank">{{title}}</a>{{/title}}
+                {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
+                {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
+                {{#description}}<p>{{description}}</p>{{/description}}
+            </div>
+        {{/events}}
+    `;
 
-var data = {
-    events: [
-        { title: "11/07 Indoor Volleyball at Girls Inc of New Hampshire", date: "11/07/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://southernnhvolleyball.com/11-07%20co-ed%20drop%20in%20temp%2009-28.html", description: "$12 for 3 hours of play, 5:45 PM - 9 PM" },
-        { title: "11/14 Indoor Volleyball at Girls Inc of New Hampshire", date: "11/14/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://southernnhvolleyball.com/11-14%20co-ed%20drop%20in%20temp%2009-28.html", description: "$12 for 3 hours of play, 5:45 PM - 9 PM" },
-        { title: "11/21 Indoor Volleyball at Girls Inc of New Hampshire", date: "11/21/2024", location: "Girls Inc of New Hampshire, Nashua", link: "https://southernnhvolleyball.com/11-21%20co-ed%20drop%20in%20temp%2009-28.html", description: "$12 for 3 hours of play, 5:45 PM - 9 PM" },
-        { title: "", date: "", location: "", link: "", description: "" },
-        { title: "", date: "", location: "", link: "", description: "" },
-        { title: "", date: "", location: "", link: "", description: "" },
-        { title: "", date: "", location: "", link: "", description: "" }
-    ]
-};
-        var rendered = Mustache.render(template, data);
-        document.getElementById('events-container').innerHTML = rendered;
-    </script>
+    var data = {
+        events: [
+            { 
+                title: "11/26 RCO Indoor Volleyball at Westwood Park YMCA", 
+                date: "11/26/2024", 
+                location: "90 Northwest Blvd, Nashua, NH 03063", 
+                link: "https://southernnhvolleyball.com/RCO%20Event%201.html", 
+                description: "$8 for 2 hours of play, 8:00 PM - 10:00 PM" 
+            },
+            { title: "", date: "", location: "", link: "", description: "" },
+            { title: "", date: "", location: "", link: "", description: "" },
+            { title: "", date: "", location: "", link: "", description: "" },
+            { title: "", date: "", location: "", link: "", description: "" },
+            { title: "", date: "", location: "", link: "", description: "" },
+            { title: "", date: "", location: "", link: "", description: "" },
+            { title: "", date: "", location: "", link: "", description: "" }
+        ]
+    };
+
+    var rendered = Mustache.render(template, data);
+    document.getElementById('events-container').innerHTML = rendered;
+</script>
 </body>
 </html>
