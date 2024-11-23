@@ -101,52 +101,52 @@ Our RCO volleyball events are a great way to test your skills in a different for
   <p>&#10013; With God all things are possible.</p>
 </footer>
      <script>
-        var template = `
-            {{#events}}
-                <div class="event">
-                    {{#title}}<a href="{{link}}" target="_blank">{{title}}</a>{{/title}}
-                    {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
-                    {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
-                    {{#description}}<p>{{description}}</p>{{/description}}
-                </div>
-            {{/events}}
-        `;
+    var template = `
+        {{#events}}
+            <div class="event">
+                {{#title}}<a href="{{link}}" target="_blank">{{title}}</a>{{/title}}
+                {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
+                {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
+                {{#description}}<p>{{description}}</p>{{/description}}
+            </div>
+        {{/events}}
+    `;
 
-        var data = {
-            events: [
-           { 
-                    title: "", 
-                    date: "", 
-                    location: "", 
-                    link: "", 
-                    description: "" 
-                },
-                { 
-                    title: "", 
-                    date: "", 
-                    location: "", 
-                    link: "", 
-                    description: "" 
-                },
-                { 
-                    title: "", 
-                    date: "", 
-                    location: "", 
-                    link: "", 
-                    description: "" 
-                },
-                { 
-                    title: "", 
-                    date: "", 
-                    location: "", 
-                    link: "", 
-                    description: "" 
-                }
-            ]
-        };
+    var data = {
+        events: [
+            { 
+                title: "11/26 RCO Indoor Volleyball at Westwood Park YMCA (Nashua), $8 2hrs",
+                date: "Tuesday, November 26, 2024, 8:00 PM - 10:00 PM",
+                location: "90 Northwest Blvd, Nashua, NH 03063",
+                link: "https://forms.gle/rNPPn1E1VBdMEa2s8",
+                description: "Reverse Co-Ed Volleyball with 3 men and 3 women per team. Click the link to sign up or check out who’s already registered."
+            },
+            { 
+                title: "",
+                date: "",
+                location: "",
+                link: "",
+                description: ""
+            },
+            { 
+                title: "",
+                date: "",
+                location: "",
+                link: "",
+                description: ""
+            },
+            { 
+                title: "",
+                date: "",
+                location: "",
+                link: "",
+                description: ""
+            }
+        ]
+    };
 
-        var rendered = Mustache.render(template, data);
-        document.getElementById('events-container').innerHTML = rendered;
-    </script>
+    var rendered = Mustache.render(template, data);
+    document.getElementById('events-container').innerHTML = rendered;
+</script>
 </body>
 </html>
