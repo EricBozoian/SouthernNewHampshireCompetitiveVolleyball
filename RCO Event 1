@@ -309,21 +309,23 @@
 <script>
     // Define the data object
     const data = {
-        eventTitle: "11/22 RCO Indoor Volleyball at Girls Inc of New Hampshire (Nashua), $12 3hrs",
-        signupLink: "https://forms.gle/jWVt1M4s2Q9qjJxg6",
-        eventDateTime: "Fri, Nov 22, 5:45pm - 9pm EDT",
-        eventLocation: "Girls Inc of New Hampshire",
-        eventCity: "Nashua, United States",
+        eventTitle: "11/26 RCO Indoor Volleyball at Westwood Park YMCA (Nashua), $8 2hrs",
+        signupLink: "https://forms.gle/rNPPn1E1VBdMEa2s8",
+        eventDateTime: "Tuesday, November 26, 2024 8:00pm - 10:00pm",
+        eventLocation: "90 Northwest Blvd, Nashua, NH 03063",
+        eventCity: "Nashua NH",
         signupListLink: "https://docs.google.com/spreadsheets/d/1yAAWFyVgcwdZhF8OKuQN59UP_LkwINQitzgWUuX7ixE/edit?usp=sharing"
     };
-        // Get the HTML content that will be used as a template
-        const template = document.body.innerHTML;
 
-        // Render the template by merging it with the data object
-        const rendered = Mustache.render(template, data);
+    // Get the HTML content that will be used as a template
+    const template = document.body.innerHTML;
 
-        // Replace the body content with the rendered HTML
-        document.body.innerHTML = rendered;
-    </script>
+    // Render the template by merging it with the data object
+    const rendered = Mustache.render(template, data);
+
+    // Replace the body content with the rendered HTML
+    document.body.innerHTML = rendered;
+</script>
+
 </body>
 </html
