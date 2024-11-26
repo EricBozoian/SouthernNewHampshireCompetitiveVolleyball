@@ -53,8 +53,8 @@
   <p>Southern New Hampshire Competitive Volleyball @ 2024</p>
   <p>&#10013; With God all things are possible.</p>
 </footer>
- <!-- Mustache.js Script to Render Events -->
-   <script>
+<!-- Mustache.js Rendering Script -->
+<script>
     var template = `
         {{#events}}
             <div class="event">
@@ -69,13 +69,19 @@
     var data = {
         events: [
             { 
-                title: "11/26 RCO Indoor Volleyball at Westwood Park YMCA", 
-                date: "11/26/2024", 
-                location: "90 Northwest Blvd, Nashua, NH 03063", 
-                link: "https://southernnhvolleyball.com/RCO%20Event%201.html", 
-                description: "$8 for 2 hours of play, 8:00 PM - 10:00 PM" 
+                title: "11/26 RCO Indoor Volleyball at Westwood Park YMCA",
+                date: "Tuesday, November 26, 2024, 8:00 PM - 10:00 PM",
+                location: "90 Northwest Blvd, Nashua, NH 03063",
+                link: "https://southernnhvolleyball.com/RCO%20Event%201.html",
+                description: "$8 for 2 hours of play. Reverse Co-Ed Volleyball with 3 men and 3 women per team."
             },
-            { title: "", date: "", location: "", link: "", description: "" },
+            { 
+                title: "12/26 RCO Indoor Volleyball at Westwood Park YMCA",
+                date: "Tuesday, December 3, 2024, 8:00 PM - 10:00 PM",
+                location: "90 Northwest Blvd, Nashua, NH 03063",
+                link: "https://southernnhvolleyball.com/RCO%20Event%202.html",
+                description: "$8 for 2 hours of play. Reverse Co-Ed Volleyball with 3 men and 3 women per team."
+            },
             { title: "", date: "", location: "", link: "", description: "" },
             { title: "", date: "", location: "", link: "", description: "" },
             { title: "", date: "", location: "", link: "", description: "" },
