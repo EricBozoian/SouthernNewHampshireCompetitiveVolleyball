@@ -96,35 +96,21 @@ To add some extra excitement, we offer a prize system that rewards outstanding p
   <p>Southern New Hampshire Competitive Volleyball @ 2024</p>
   <p>&#10013; With God all things are possible.</p>
 </footer>
-    <!-- Mustache.js Rendering Script -->
+<!-- Mustache.js Rendering Script -->
 <script>
-
     var template = `
-
         {{#events}}
-
             <div class="event">
-
                 {{#title}}<a href="{{link}}" target="_blank">{{title}}</a>{{/title}}
-
                 {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
-
                 {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
-
                 {{#description}}<p>{{description}}</p>{{/description}}
-
             </div>
-
         {{/events}}
-
     `;
 
-
-
     var data = {
-
         events: [
-
             {
                 title: "Indoor Co-Ed Volleyball at Girls Inc of New Hampshire",
                 date: "Tue, Dec 5th, 5:45pm - 9pm EDT",
@@ -147,22 +133,17 @@ To add some extra excitement, we offer a prize system that rewards outstanding p
                 description: "Join us for a competitive indoor co-ed volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). Teams are assigned with balancing done prior to the event. Warm-up starts at 5:45 PM, followed by gameplay. This event is for experienced players only. Click the event header for more details and sign-up information."
             },
             {
-                title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: ""
+                title: "Indoor Co-Ed Volleyball at Girls Inc of New Hampshire",
+                date: "Thu, Jan 2nd, 5:45pm - 9pm EDT",
+                location: "Girls Inc of New Hampshire, Nashua, United States",
+                link: "https://southernnhvolleyball.com/COED%20Event%204.html",
+                description: "Join us for a competitive indoor co-ed volleyball drop-in event. $12 for players with insurance, $15.50 for players without insurance (includes the annual insurance fee). Teams are assigned with balancing done prior to the event. Warm-up starts at 5:45 PM, followed by gameplay. This event is for experienced players only. Click the event header for more details and sign-up information."
             }
         ]
-
     };
 
-
-
     var rendered = Mustache.render(template, data);
-
     document.getElementById('events-container').innerHTML = rendered;
-
 </script>
 </body>
 </html>
