@@ -9,13 +9,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
 </head>
 <body>
-    <header>
-        <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
-        <h1>Southern New Hampshire Competitive Volleyball</h1>
-        <p>A place for competitive volleyball</p>
-        <a href="All Events.html">
-            <button class="btn">All Events</button>
-        </a>
+      <!-- Container where rendered content will appear -->
+  <div id="content-container"></div>
+<script type="text/template" id="mustache-template">
     </header>
  <!-- Navigation Menu -->
 <nav>
@@ -365,8 +361,8 @@
 </script>
 <!-- Mustache.js Rendering Script -->
 <script>
-    // Define the data object
-    const data = {
+  // Your data object remains the same
+  const data = {
     completeTeamSignUpButtonText: "Complete Teams Sign up here!",
     checkoutCompleteTeamSignUpLink: "https://example.com/team-signup",
     checkoutCompleteTeamSignUpText: "See Complete Signed-Up Teams",
@@ -378,76 +374,56 @@
     captainSignUpText: "Sign Up here",
     teamsInNeedLink: "https://example.com/teams-in-need",
     teamsInNeedText: "See Teams in Need of players",
-
-    // Costs and dates
     teamCost: "471",
     playerCost: "78",
     startDate: "Thursday, January 16th, 2025",
     endDate: "Thursday, March 6th, 2025",
     registrationDeadline: "Saturday, January 11th, 2025",
     registrationDeadlineTime: "5:00 PM",
-
-    // Prizes
     firstPlacePrize: "400",
     firstPlaceIndividualPrize: "66.67",
     secondPlacePrize: "150",
     secondPlaceIndividualPrize: "25",
-
-    // Teams
     team1: "Team 1 Name",
     team2: "Team 2 Name",
     team3: "Team 3 Name",
     team4: "Team 4 Name",
     team5: "Team 5 Name",
-
-    // Team 1 players
     team1Player1: "TBD",
     team1Player2: "TBD",
     team1Player3: "TBD",
     team1Player4: "TBD",
     team1Player5: "TBD",
     team1Player6: "TBD",
-
-    // Team 2 players
     team2Player1: "TBD",
     team2Player2: "TBD",
     team2Player3: "TBD",
     team2Player4: "TBD",
     team2Player5: "TBD",
     team2Player6: "TBD",
-
-    // Team 3 players
     team3Player1: "TBD",
     team3Player2: "TBD",
     team3Player3: "TBD",
     team3Player4: "TBD",
     team3Player5: "TBD",
     team3Player6: "TBD",
-
-    // Team 4 players
     team4Player1: "TBD",
     team4Player2: "TBD",
     team4Player3: "TBD",
     team4Player4: "TBD",
     team4Player5: "TBD",
     team4Player6: "TBD",
-
-    // Team 5 players
     team5Player1: "TBD",
     team5Player2: "TBD",
     team5Player3: "TBD",
     team5Player4: "TBD",
     team5Player5: "TBD",
     team5Player6: "TBD",
- };
-        // Get the HTML content that will be used as a template
-        const template = document.body.innerHTML;
+  };
 
-        // Render the template by merging it with the data object
-        const rendered = Mustache.render(template, data);
-
-        // Replace the body content with the rendered HTML
-        document.body.innerHTML = rendered;
-    </script>
+  const template = document.getElementById('mustache-template').innerHTML;
+  const rendered = Mustache.render(template, data);
+  document.getElementById('content-container').innerHTML = rendered;
+</script>
 </body>
 </html>
