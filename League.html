@@ -364,8 +364,9 @@
   }
 </script>
 <script>
-  // Define data to populate placeholders
-  const data = {
+document.addEventListener("DOMContentLoaded", () => {
+    // Define your data
+    const data = {
     // Buttons and links
     completeTeamSignUpButtonText: "Complete Teams Sign up here!",
     checkoutCompleteTeamSignUpLink: "https://example.com/team-signup",
@@ -441,15 +442,15 @@
     team5Player6: "TBD",
   };
 
-  // Find and replace all Mustache placeholders
-  document.addEventListener("DOMContentLoaded", () => {
-    const targetElement = document.getElementById("targetElement"); // Replace this with the ID of the section to populate
-    if (targetElement) {
-      const template = targetElement.innerHTML; // Get HTML content of the target element
-      const rendered = Mustache.render(template, data); // Render with Mustache
-      targetElement.innerHTML = rendered; // Replace the content with rendered data
-    }
-  });
+    // Select the entire page content
+    const pageContent = document.body.innerHTML;
+
+    // Render the content using Mustache.js
+    const renderedContent = Mustache.render(pageContent, data);
+
+    // Replace the entire page content with the rendered content
+    document.body.innerHTML = renderedContent;
+});
 </script>
 </body>
 </html>
