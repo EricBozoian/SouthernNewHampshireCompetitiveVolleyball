@@ -47,38 +47,38 @@
     </nav>
 
 <!-- League Section -->
-<section class="league" style="padding: 20px; max-width: 1200px; margin: 0 auto;">
-    <h2 style="text-align: center; color: #333;">SNHCVB League</h2>
-    <img src="League-800x400-2.png" alt="League Action" style="max-width: 100%; height: auto; display: block; margin: 20px auto;">
-    <div style="text-align: center; margin: 20px 0;">
-        <button class="btn" style="padding: 10px 20px; font-size: 1rem; background-color: #007BFF; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
-            {{completeTeamSignUpButtonText}}
-        </button>
-    </div>
-    <p class="c1" style="text-align: center; margin: 20px 0; font-size: 1rem; line-height: 1.6; color: #333;">
-        <span class="c4" style="font-size: 1.2rem; color: #000;">&#128064; &#128073; Click </span>
-        <a class="c10" href="{{checkoutCompleteTeamSignUpLink}}" style="color: #007BFF; text-decoration: underline; font-weight: bold;">{{checkoutCompleteTeamSignUpText}}</a>
-        <span class="c5 c4" style="font-size: 1rem; color: #000;"> to check out what complete teams have signed up so far! &#128064;</span>
+<section class="league">
+    <h2 class="c3">SNHCVB League</h2>
+    <p class="c1">
+        <span class="c4">&#128064; &#128073; Click </span>
+        <span class="c9 c25">
+            <a class="c10" href="{{checkoutCompleteTeamSignUpLink}}">{{checkoutCompleteTeamSignUpText}}</a>
+        </span>
+        <span class="c5 c4"> to check out what complete teams have signed up so far! &#128064;</span>
     </p>
+    <div class="button-container" style="text-align: center;">
+        <button class="btn">{{completeTeamSignUpButtonText}}</button>
+    </div>
 </section>
-    <!-- Textbox Container -->
-<div class="textbox-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+<!-- Textbox Container -->
+<div class="textbox-container">
     <!-- Left Box -->
-    <div class="textbox" style="flex: 1 1 45%; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9; min-width: 300px;">
-        <h2 style="color: #333;">Free Agent Sign-Up Information</h2>
-        <h3 style="color: #007BFF;">Looking to play but don't have a team?</h3>
-        <a href="{{freeAgentSignUpLink}}" class="link" style="color: #007BFF; text-decoration: underline;">{{freeAgentSignUpText}}</a>
-        <h3 style="color: #007BFF; margin-top: 15px;">Available Free Agents for Pickup</h3>
-        <a href="{{freeAgentListLink}}" class="link" style="color: #007BFF; text-decoration: underline;">{{freeAgentListText}}</a>
+    <div class="textbox">
+        <h2>Free Agent Sign-Up Information</h2>
+        <h3>Looking to play but don't have a team?</h3>
+        <a href="{{freeAgentSignUpLink}}" class="link">{{freeAgentSignUpText}}</a>
+        <h3>Available Free Agents for Pickup</h3>
+        <a href="{{freeAgentListLink}}" class="link">{{freeAgentListText}}</a>
     </div>
 
     <!-- Right Box -->
-    <div class="textbox" style="flex: 1 1 45%; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9; min-width: 300px;">
-        <h2 style="color: #333;">Captains Looking for Players</h2>
-        <h3 style="color: #007BFF;">Captains Looking for Players?</h3>
-        <a href="{{captainSignUpLink}}" class="link" style="color: #007BFF; text-decoration: underline;">{{captainSignUpText}}</a>
-        <h3 style="color: #007BFF; margin-top: 15px;">Teams That Are Looking for Players</h3>
-        <a href="{{teamsInNeedLink}}" class="link" style="color: #007BFF; text-decoration: underline;">{{teamsInNeedText}}</a>
+    <div class="textbox">
+        <h2>Captains Looking for Players</h2>
+        <h3>Captains Looking for Players?</h3>
+        <a href="{{captainSignUpLink}}" class="link">{{captainSignUpText}}</a>
+        <h3>Teams That Are Looking for Players</h3>
+        <a href="{{teamsInNeedLink}}" class="link">{{teamsInNeedText}}</a>
     </div>
 </div>
 </section>
