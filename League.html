@@ -6,6 +6,7 @@
     <title>Southern NH Competitive Volleyball - League</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
 </head>
 <body>
     <header>
@@ -45,56 +46,55 @@
         </ul>
     </nav>
 
- <!-- League Section -->
+<!-- League Section -->
 <section class="league" style="padding: 20px; max-width: 1200px; margin: 0 auto;">
     <h2 style="text-align: center; color: #333;">SNHCVB League</h2>
     <img src="League-800x400-2.png" alt="League Action" style="max-width: 100%; height: auto; display: block; margin: 20px auto;">
     <div style="text-align: center; margin: 20px 0;">
         <button class="btn" style="padding: 10px 20px; font-size: 1rem; background-color: #007BFF; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
-            Complete Teams Sign Up Here
+            {{completeTeamSignUpButtonText}}
         </button>
     </div>
     <p class="c1" style="text-align: center; margin: 20px 0; font-size: 1rem; line-height: 1.6; color: #333;">
         <span class="c4" style="font-size: 1.2rem; color: #000;">&#128064; &#128073; Click </span>
-        <a class="c10" href="{{signupListLink}}" style="color: #007BFF; text-decoration: underline; font-weight: bold;">HERE</a>
+        <a class="c10" href="{{checkoutCompleteTeamSignUpLink}}" style="color: #007BFF; text-decoration: underline; font-weight: bold;">{{checkoutCompleteTeamSignUpText}}</a>
         <span class="c5 c4" style="font-size: 1rem; color: #000;"> to check out what complete teams have signed up so far! &#128064;</span>
     </p>
-    
-    <!-- Textbox Container -->
-    <div class="textbox-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-        <!-- Left Box -->
-        <div class="textbox" style="flex: 1 1 45%; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9; min-width: 300px;">
-            <h2 style="color: #333;">Free Agent Sign-Up Information</h2>
-            <h3 style="color: #007BFF;">Looking to play but don't have a team?</h3>
-            <a href="{{Freeagentsignup}}" class="link" style="color: #007BFF; text-decoration: underline;">Free Agents Sign-Up Here</a>
-            <h3 style="color: #007BFF; margin-top: 15px;">Available Free Agents for Pickup</h3>
-            <a href="{{Freeagentlist}}" class="link" style="color: #007BFF; text-decoration: underline;">List of Available Free Agents</a>
-        </div>
-
-        <!-- Right Box -->
-        <div class="textbox" style="flex: 1 1 45%; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9; min-width: 300px;">
-            <h2 style="color: #333;">Captains Looking for Players</h2>
-            <h3 style="color: #007BFF;">Captains Looking for Players?</h3>
-            <a href="{{captainSignupLink}}" class="link" style="color: #007BFF; text-decoration: underline;">Sign Up Here</a>
-            <h3 style="color: #007BFF; margin-top: 15px;">Teams That Are Looking for Players</h3>
-            <a href="{{teamsInNeedLink}}" class="link" style="color: #007BFF; text-decoration: underline;">See Teams in Need of Players</a>
-        </div>
-    </div>
 </section>
-        <!-- Important Information Section -->
-    <div class="info-box" style="border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: #f9f9f9; max-width: 600px; margin: 20px auto; font-family: Arial, sans-serif;">
+    <!-- Textbox Container -->
+<div class="textbox-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <!-- Left Box -->
+    <div class="textbox" style="flex: 1 1 45%; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9; min-width: 300px;">
+        <h2 style="color: #333;">Free Agent Sign-Up Information</h2>
+        <h3 style="color: #007BFF;">Looking to play but don't have a team?</h3>
+        <a href="{{freeAgentSignUpLink}}" class="link" style="color: #007BFF; text-decoration: underline;">{{freeAgentSignUpText}}</a>
+        <h3 style="color: #007BFF; margin-top: 15px;">Available Free Agents for Pickup</h3>
+        <a href="{{freeAgentListLink}}" class="link" style="color: #007BFF; text-decoration: underline;">{{freeAgentListText}}</a>
+    </div>
+
+    <!-- Right Box -->
+    <div class="textbox" style="flex: 1 1 45%; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9; min-width: 300px;">
+        <h2 style="color: #333;">Captains Looking for Players</h2>
+        <h3 style="color: #007BFF;">Captains Looking for Players?</h3>
+        <a href="{{captainSignUpLink}}" class="link" style="color: #007BFF; text-decoration: underline;">{{captainSignUpText}}</a>
+        <h3 style="color: #007BFF; margin-top: 15px;">Teams That Are Looking for Players</h3>
+        <a href="{{teamsInNeedLink}}" class="link" style="color: #007BFF; text-decoration: underline;">{{teamsInNeedText}}</a>
+    </div>
+</div>
+</section>
+  <!-- Important Information Section -->
+<div class="info-box" style="border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: #f9f9f9; max-width: 600px; margin: 20px auto; font-family: Arial, sans-serif;">
     <h3 style="text-align: center; color: #333;">Important Information</h3>
     <ul style="list-style-type: none; padding: 0; line-height: 1.8;">
-        <li><strong>Cost:</strong> $471 per Team, $78 per Player</li>
-        <li><strong>League Days:</strong> Thursdays, Start: <strong>Thursday, Jan 16th, 2025</strong>, End: <strong>March 27th, 2025</strong> (subject to adjustment due to Eric's wedding)</li>
-        <li><strong>Prizes:</strong> 1st place: <strong>$400</strong>, 2nd place: <strong>$150</strong></li>
+        <li><strong>Cost:</strong> ${{teamCost}} per Team, ${{playerCost}} per Player</li>
+        <li><strong>League Days:</strong> Thursdays, Start: <strong>{{startDate}}</strong>, End: <strong>{{endDate}}</strong> (subject to adjustment due to Eric's wedding)</li>
+        <li><strong>Prizes:</strong> 1st place: <strong>${{firstPlacePrize}}</strong>, 2nd place: <strong>${{secondPlacePrize}}</strong></li>
         <li><strong>How to Sign Up:</strong> Click the links below</li>
-        <li><strong>Registration Deadline:</strong> Saturday, January 11th, 2025, by 5:00 PM</li>
+        <li><strong>Registration Deadline:</strong> {{registrationDeadline}}, by {{registrationDeadlineTime}}</li>
         <li><strong>Format:</strong> 3 Teams: 2 Teams play while 1 team refs. Games to 21 points, 3 matches per night.</li>
         <li><strong>Rules:</strong> Minimum of 2 ladies on each team. Additional rules are listed below.</li>
     </ul>
 </div>
-
 <!-- League Description -->
 <div class="about-league">
     <h3>About the League:</h3>
@@ -103,13 +103,13 @@
     </p>
     <p><strong>League Highlights:</strong></p>
     <p><strong>Prizes:</strong><br>
-        Playoff Champion (1st Place): $400 for the winning team in the playoffs (individual players receive $66.67 each).<br>
-        SPlayoff Runner-Up (2nd Place): $150 for the team finishing second in the playoffs (individual players receive $25 each).<br>
+        Playoff Champion (1st Place): ${{firstPlacePrize}} for the winning team in the playoffs (individual players receive ${{firstPlaceIndividualPrize}} each).<br>
+        Playoff Runner-Up (2nd Place): ${{secondPlacePrize}} for the team finishing second in the playoffs (individual players receive ${{secondPlaceIndividualPrize}} each).<br>
         Both the Playoff Champion and Runner-Up teams will also receive trophies to commemorate their achievements.
     </p>
     <p><strong>Registration Options:</strong><br>
-        Team Registration: Flat fee of $471 per team.<br>
-        Individual Player Registration: $78 per player. Individual players will be assigned to teams, and we assist in forming balanced rosters. Players unhappy with their assigned teams may request a refund up to 5 days before the league starts.
+        Team Registration: Flat fee of ${{teamCost}} per team.<br>
+        Individual Player Registration: ${{playerCost}} per player. Individual players will be assigned to teams, and we assist in forming balanced rosters. Players unhappy with their assigned teams may request a refund up to 5 days before the league starts.
     </p>
     <p><strong>Game Schedule:</strong><br>
         Each team plays 14 regular-season games followed by playoffs.<br>
@@ -184,101 +184,100 @@
     </p>
 
     <h3>Regular Season Schedule</h3>
-    <div class="schedule">
-        <h4>Day 1</h4>
-        <ul>
-            <li><strong>6:00 PM:</strong> Team 1 vs. Team 2 (Team 3 referees)</li>
-            <li><strong>7:00 PM:</strong> Team 1 vs. Team 5 (Team 4 referees)</li>
-            <li><strong>8:00 PM:</strong> Team 3 vs. Team 4 (Team 2 referees)</li>
-        </ul>
-        <h4>Day 2</h4>
-        <ul>
-            <li><strong>6:00 PM:</strong> Team 2 vs. Team 3 (Team 5 referees)</li>
-            <li><strong>7:00 PM:</strong> Team 3 vs. Team 5 (Team 4 referees)</li>
-            <li><strong>8:00 PM:</strong> Team 1 vs. Team 4 (Team 2 referees)</li>
-        </ul>
-        <h4>Day 3</h4>
-        <ul>
-            <li><strong>6:00 PM:</strong> Team 2 vs. Team 4 (Team 1 referees)</li>
-            <li><strong>7:00 PM:</strong> Team 1 vs. Team 4 (Team 3 referees)</li>
-            <li><strong>8:00 PM:</strong> Team 3 vs. Team 5 (Team 2 referees)</li>
-        </ul>
-        <h4>Day 4</h4>
-        <ul>
-            <li><strong>6:00 PM:</strong> Team 1 vs. Team 5 (Team 4 referees)</li>
-            <li><strong>7:00 PM:</strong> Team 3 vs. Team 4 (Team 1 referees)</li>
-            <li><strong>8:00 PM:</strong> Team 2 vs. Team 3 (Team 5 referees)</li>
-        </ul>
-        <h4>Day 5</h4>
-        <ul>
-            <li><strong>6:00 PM:</strong> Team 1 vs. Team 5 (Team 3 referees)</li>
-            <li><strong>7:00 PM:</strong> Team 3 vs. Team 5 (Team 2 referees)</li>
-            <li><strong>8:00 PM:</strong> Team 2 vs. Team 4 (Team 1 referees)</li>
-        </ul>
-        <h4>Day 6</h4>
-        <ul>
-            <li><strong>6:00 PM:</strong> Team 3 vs. Team 5 (Team 2 referees)</li>
-            <li><strong>7:00 PM:</strong> Team 1 vs. Team 2 (Team 4 referees)</li>
-            <li><strong>8:00 PM:</strong> Team 1 vs. Team 4 (Team 5 referees)</li>
-        </ul>
-        <h4>Day 7</h4>
-        <ul>
-            <li><strong>6:00 PM:</strong> Team 1 vs. Team 2 (Team 3 referees)</li>
-            <li><strong>7:00 PM:</strong> Team 3 vs. Team 5 (Team 4 referees)</li>
-            <li><strong>8:00 PM:</strong> Team 2 vs. Team 3 (Team 5 referees)</li>
-        </ul>
-        <h4>Day 8</h4>
-        <ul>
-            <li><strong>6:00 PM:</strong> Team 3 vs. Team 4 (Team 1 referees)</li>
-            <li><strong>7:00 PM:</strong> Team 2 vs. Team 3 (Team 5 referees)</li>
-            <li><strong>8:00 PM:</strong> Team 1 vs. Team 5 (Team 4 referees)</li>
-        </ul>
-    </div>
-
+<div class="schedule">
+    <h4>Day 1</h4>
+    <ul>
+        <li><strong>6:00 PM:</strong> {{team1}} vs. {{team2}} ({{team3}} referees)</li>
+        <li><strong>7:00 PM:</strong> {{team1}} vs. {{team5}} ({{team4}} referees)</li>
+        <li><strong>8:00 PM:</strong> {{team3}} vs. {{team4}} ({{team2}} referees)</li>
+    </ul>
+    <h4>Day 2</h4>
+    <ul>
+        <li><strong>6:00 PM:</strong> {{team2}} vs. {{team3}} ({{team5}} referees)</li>
+        <li><strong>7:00 PM:</strong> {{team3}} vs. {{team5}} ({{team4}} referees)</li>
+        <li><strong>8:00 PM:</strong> {{team1}} vs. {{team4}} ({{team2}} referees)</li>
+    </ul>
+    <h4>Day 3</h4>
+    <ul>
+        <li><strong>6:00 PM:</strong> {{team2}} vs. {{team4}} ({{team1}} referees)</li>
+        <li><strong>7:00 PM:</strong> {{team1}} vs. {{team4}} ({{team3}} referees)</li>
+        <li><strong>8:00 PM:</strong> {{team3}} vs. {{team5}} ({{team2}} referees)</li>
+    </ul>
+    <h4>Day 4</h4>
+    <ul>
+        <li><strong>6:00 PM:</strong> {{team1}} vs. {{team5}} ({{team4}} referees)</li>
+        <li><strong>7:00 PM:</strong> {{team3}} vs. {{team4}} ({{team1}} referees)</li>
+        <li><strong>8:00 PM:</strong> {{team2}} vs. {{team3}} ({{team5}} referees)</li>
+    </ul>
+    <h4>Day 5</h4>
+    <ul>
+        <li><strong>6:00 PM:</strong> {{team1}} vs. {{team5}} ({{team3}} referees)</li>
+        <li><strong>7:00 PM:</strong> {{team3}} vs. {{team5}} ({{team2}} referees)</li>
+        <li><strong>8:00 PM:</strong> {{team2}} vs. {{team4}} ({{team1}} referees)</li>
+    </ul>
+    <h4>Day 6</h4>
+    <ul>
+        <li><strong>6:00 PM:</strong> {{team3}} vs. {{team5}} ({{team2}} referees)</li>
+        <li><strong>7:00 PM:</strong> {{team1}} vs. {{team2}} ({{team4}} referees)</li>
+        <li><strong>8:00 PM:</strong> {{team1}} vs. {{team4}} ({{team5}} referees)</li>
+    </ul>
+    <h4>Day 7</h4>
+    <ul>
+        <li><strong>6:00 PM:</strong> {{team1}} vs. {{team2}} ({{team3}} referees)</li>
+        <li><strong>7:00 PM:</strong> {{team3}} vs. {{team5}} ({{team4}} referees)</li>
+        <li><strong>8:00 PM:</strong> {{team2}} vs. {{team3}} ({{team5}} referees)</li>
+    </ul>
+    <h4>Day 8</h4>
+    <ul>
+        <li><strong>6:00 PM:</strong> {{team3}} vs. {{team4}} ({{team1}} referees)</li>
+        <li><strong>7:00 PM:</strong> {{team2}} vs. {{team3}} ({{team5}} referees)</li>
+        <li><strong>8:00 PM:</strong> {{team1}} vs. {{team5}} ({{team4}} referees)</li>
+    </ul>
+</div>
     <h3>Playoff Schedule</h3>
     <p>
         The playoff structure will be announced closer to the end of the regular season, pending final details surrounding the wedding and honeymoon.
     </p>
 </div>
 </div>
-       <!-- Team Rosters Section -->
+<!-- Team Rosters Section -->
 <div class="team-roster-section">
     <h2>Team Rosters</h2>
     <div class="team-rosters">
         <!-- First row with 3 boxes -->
         <div class="team-box">
-            <h3>Team 1:</h3>
+            <h3>{{team1}}:</h3>
             <ul>
-                <li>1.</li>
-                <li>2.</li>
-                <li>3.</li>
-                <li>4.</li>
-                <li>5.</li>
-                <li>6.</li>
+                <li>{{team1Player1}}</li>
+                <li>{{team1Player2}}</li>
+                <li>{{team1Player3}}</li>
+                <li>{{team1Player4}}</li>
+                <li>{{team1Player5}}</li>
+                <li>{{team1Player6}}</li>
             </ul>
             <p>Standing W/L</p>
         </div>
         <div class="team-box">
-            <h3>Team 2:</h3>
+            <h3>{{team2}}:</h3>
             <ul>
-                <li>1.</li>
-                <li>2.</li>
-                <li>3.</li>
-                <li>4.</li>
-                <li>5.</li>
-                <li>6.</li>
+                <li>{{team2Player1}}</li>
+                <li>{{team2Player2}}</li>
+                <li>{{team2Player3}}</li>
+                <li>{{team2Player4}}</li>
+                <li>{{team2Player5}}</li>
+                <li>{{team2Player6}}</li>
             </ul>
             <p>Standing W/L</p>
         </div>
         <div class="team-box">
-            <h3>Team 3:</h3>
+            <h3>{{team3}}:</h3>
             <ul>
-                <li>1.</li>
-                <li>2.</li>
-                <li>3.</li>
-                <li>4.</li>
-                <li>5.</li>
-                <li>6.</li>
+                <li>{{team3Player1}}</li>
+                <li>{{team3Player2}}</li>
+                <li>{{team3Player3}}</li>
+                <li>{{team3Player4}}</li>
+                <li>{{team3Player5}}</li>
+                <li>{{team3Player6}}</li>
             </ul>
             <p>Standing W/L</p>
         </div>
@@ -287,26 +286,26 @@
     <!-- Second row with 2 boxes -->
     <div class="team-rosters">
         <div class="team-box">
-            <h3>Team 4:</h3>
+            <h3>{{team4}}:</h3>
             <ul>
-                <li>1.</li>
-                <li>2.</li>
-                <li>3.</li>
-                <li>4.</li>
-                <li>5.</li>
-                <li>6.</li>
+                <li>{{team4Player1}}</li>
+                <li>{{team4Player2}}</li>
+                <li>{{team4Player3}}</li>
+                <li>{{team4Player4}}</li>
+                <li>{{team4Player5}}</li>
+                <li>{{team4Player6}}</li>
             </ul>
             <p>Standing W/L</p>
         </div>
         <div class="team-box">
-            <h3>Team 5:</h3>
+            <h3>{{team5}}:</h3>
             <ul>
-                <li>1.</li>
-                <li>2.</li>
-                <li>3.</li>
-                <li>4.</li>
-                <li>5.</li>
-                <li>6.</li>
+                <li>{{team5Player1}}</li>
+                <li>{{team5Player2}}</li>
+                <li>{{team5Player3}}</li>
+                <li>{{team5Player4}}</li>
+                <li>{{team5Player5}}</li>
+                <li>{{team5Player6}}</li>
             </ul>
             <p>Standing W/L</p>
         </div>
@@ -365,6 +364,91 @@ function showSlides(n) {
   // Show the current slide
   slides[slideIndex - 1].style.display = "block";  
 }
+</script>
+    <script>
+  // Define data to populate placeholders
+  const data = {
+    // Buttons and links
+    completeTeamSignUpButtonText: "Complete Teams Sign up here!",
+    checkoutCompleteTeamSignUpLink: "https://example.com/team-signup",
+    checkoutCompleteTeamSignUpText: "See Complete Signed-Up Teams",
+    freeAgentSignUpLink: "https://example.com/free-agent-signup",
+    freeAgentSignUpText: "Sign Up as a Free Agent",
+    freeAgentListLink: "https://example.com/free-agent-list",
+    freeAgentListText: "View Free Agents",
+    captainSignUpLink: "https://example.com/captain-signup",
+    captainSignUpText: "Sign Up here",
+    teamsInNeedLink: "https://example.com/teams-in-need",
+    teamsInNeedText: "See Teams in Need of players",
+
+    // Costs and dates
+    teamCost: "471",
+    playerCost: "78",
+    startDate: "Thursday, January 16th, 2025",
+    endDate: "Thursday, March 6th, 2025",
+    registrationDeadline: "Saturday, January 11th, 2025",
+    registrationDeadlineTime: "5:00 PM",
+
+    // Prizes
+    firstPlacePrize: "400",
+    firstPlaceIndividualPrize: "66.67",
+    secondPlacePrize: "150",
+    secondPlaceIndividualPrize: "25",
+
+    // Teams
+    team1: "Team 1 Name",
+    team2: "Team 2 Name",
+    team3: "Team 3 Name",
+    team4: "Team 4 Name",
+    team5: "Team 5 Name",
+
+    // Team 1 players
+    team1Player1: "TBD",
+    team1Player2: "TBD",
+    team1Player3: "TBD",
+    team1Player4: "TBD",
+    team1Player5: "TBD",
+    team1Player6: "TBD",
+
+    // Team 2 players
+    team2Player1: "TBD",
+    team2Player2: "TBD",
+    team2Player3: "TBD",
+    team2Player4: "TBD",
+    team2Player5: "TBD",
+    team2Player6: "TBD",
+
+    // Team 3 players
+    team3Player1: "TBD",
+    team3Player2: "TBD",
+    team3Player3: "TBD",
+    team3Player4: "TBD",
+    team3Player5: "TBD",
+    team3Player6: "TBD",
+
+    // Team 4 players
+    team4Player1: "TBD",
+    team4Player2: "TBD",
+    team4Player3: "TBD",
+    team4Player4: "TBD",
+    team4Player5: "TBD",
+    team4Player6: "TBD",
+
+    // Team 5 players
+    team5Player1: "TBD",
+    team5Player2: "TBD",
+    team5Player3: "TBD",
+    team5Player4: "TBD",
+    team5Player5: "TBD",
+    team5Player6: "TBD",
+  };
+
+  // Find and replace all Mustache placeholders
+  document.addEventListener("DOMContentLoaded", () => {
+    const template = document.body.innerHTML; // Get entire HTML content
+    const rendered = Mustache.render(template, data); // Render with Mustache
+    document.body.innerHTML = rendered; // Replace the content with rendered data
+  });
 </script>
 </body>
 </html>
