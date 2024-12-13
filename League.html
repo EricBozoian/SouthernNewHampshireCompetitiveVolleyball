@@ -13,39 +13,37 @@
         <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
         <h1>Southern New Hampshire Competitive Volleyball</h1>
         <p>A place for competitive volleyball</p>
-              <a href="All Events.html">
-    <button class="btn">All Events</button>
-</a>
+        <a href="All Events.html">
+            <button class="btn">All Events</button>
+        </a>
     </header>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="League.html" class="active">League</a></li>
-           <li><a href="#">Tournaments</a>
-                <ul class="dropdown">
-                    <li><a href="yankee-tournaments.html">Yankee Tournaments</a></li>
-                    <li><a href="SNHCVB-Tournaments.html">SNHCVB Tournaments</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Drop-In Indoor VB</a>
-                <ul class="dropdown">
-                    <li><a href="Co-ed Drop-in Nights.html">Weeknight Co-ed</a></li>
-                    <li><a href="RCO Drop-in Nights.html">Weeknight RCO</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Drop-In Outdoor VB</a>
-                <ul class="dropdown">https://github.com/EricBozoian/SouthernNewHampshireCompetitiveVolleyball/blob/main/League.html#L8C60
-                    <li><a href="Grass Drop-in.html">Weeknight Grass</a></li>
-                </ul>
-            </li>
-            <li><a href="Contact Us.html">Contact Us</a></li>
-            <li><a href="Sponsors.html">Sponsors</a></li>
-        </ul>
-    </nav>
-
+ <!-- Navigation Menu -->
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="League.html" class="active">League</a></li>
+        <li><a href="#">Tournaments</a>
+            <ul class="dropdown">
+                <li><a href="yankee-tournaments.html">Yankee Tournaments</a></li>
+                <li><a href="SNHCVB-Tournaments.html">SNHCVB Tournaments</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Drop-In Indoor VB</a>
+            <ul class="dropdown">
+                <li><a href="Co-ed Drop-in Nights.html">Weeknight Co-ed</a></li>
+                <li><a href="RCO Drop-in Nights.html">Weeknight RCO</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Drop-In Outdoor VB</a>
+            <ul class="dropdown">
+                <li><a href="Grass Drop-in.html">Weeknight Grass</a></li>
+            </ul>
+        </li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+        <li><a href="Sponsors.html">Sponsors</a></li>
+    </ul>
+</nav>
 <!-- League Section -->
 <section class="league">
     <h2 class="c3">SNHCVB League</h2>
@@ -57,10 +55,11 @@
         <span class="c5 c4"> to check out what complete teams have signed up so far! &#128064;</span>
     </p>
     <div class="button-container" style="text-align: center;">
-        <button class="btn">{{completeTeamSignUpButtonText}}</button>
+        <button class="btn" onclick="window.location.href='{{checkoutCompleteTeamSignUpLink}}';">
+            {{completeTeamSignUpButtonText}}
+        </button>
     </div>
 </section>
-
 <!-- Textbox Container -->
 <div class="textbox-container">
     <!-- Left Box -->
@@ -81,7 +80,6 @@
         <a href="{{teamsInNeedLink}}" class="link">{{teamsInNeedText}}</a>
     </div>
 </div>
-</section>
   <!-- Important Information Section -->
 <div class="info-box" style="border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: #f9f9f9; max-width: 600px; margin: 20px auto; font-family: Arial, sans-serif;">
     <h3 style="text-align: center; color: #333;">Important Information</h3>
@@ -131,7 +129,7 @@
    </p>
    <p>
       We put together a video overview of all the player ratings. If you are new to player ratings and want to see where you fit, click here:
-      <a class="c10" href="https://docs.google.com/videos/d/1ynboS2Om74242tTQi1jh8h5hydG1lLkfnTggbuy9i78/edit?usp=sharing" target="_blank">Player Ratings Video</a>
+      <a class="c10" href="https://drive.google.com/file/d/1ynboS2Om74242tTQi1jh8h5hydG1lLkfnTggbuy9i78/view?usp=sharing" target="_blank">Player Ratings Video</a>
    </p>
    <p>
       To read the entire rating scale and see where you fit, click here:
@@ -311,10 +309,10 @@
         </div>
     </div>
 </div>
-        <!-- Playoff Brackets Section -->
+      <!-- Playoff Brackets Section -->
 <section class="playoff-brackets">
   <h3>Playoff Brackets</h3>
-  <img src="Playoff Brackets v.1.png" alt="Playoff Brackets" 
+  <img src="Playoff Brackets v.1.png" alt="Playoff Brackets">
   
   <!-- Text Box Section -->
   <div class="playoff-textbox">
@@ -332,40 +330,40 @@
 <!-- JavaScript to control the slideshow -->
 <script>
   let slideIndex = 1;
-showSlides(slideIndex);
+  showSlides(slideIndex);
 
-// Controls the next and previous buttons
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Controls which slide is shown
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-
-  // Reset slideIndex if out of bounds
-  if (n > slides.length) {
-    slideIndex = 1; // Loop back to the first slide
-  }
-  if (n < 1) {
-    slideIndex = slides.length; // Loop back to the last slide
+  // Controls the next and previous buttons
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
 
-  // Hide all slides
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  // Controls which slide is shown
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
   }
 
-  // Show the current slide
-  slides[slideIndex - 1].style.display = "block";  
-}
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+
+    // Reset slideIndex if out of bounds
+    if (n > slides.length) {
+      slideIndex = 1; // Loop back to the first slide
+    }
+    if (n < 1) {
+      slideIndex = slides.length; // Loop back to the last slide
+    }
+
+    // Hide all slides
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+
+    // Show the current slide
+    slides[slideIndex - 1].style.display = "block";  
+  }
 </script>
-    <script>
+<script>
   // Define data to populate placeholders
   const data = {
     // Buttons and links
@@ -445,9 +443,12 @@ function showSlides(n) {
 
   // Find and replace all Mustache placeholders
   document.addEventListener("DOMContentLoaded", () => {
-    const template = document.body.innerHTML; // Get entire HTML content
-    const rendered = Mustache.render(template, data); // Render with Mustache
-    document.body.innerHTML = rendered; // Replace the content with rendered data
+    const targetElement = document.getElementById("targetElement"); // Replace this with the ID of the section to populate
+    if (targetElement) {
+      const template = targetElement.innerHTML; // Get HTML content of the target element
+      const rendered = Mustache.render(template, data); // Render with Mustache
+      targetElement.innerHTML = rendered; // Replace the content with rendered data
+    }
   });
 </script>
 </body>
