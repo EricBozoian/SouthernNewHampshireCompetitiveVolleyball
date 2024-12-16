@@ -7,8 +7,37 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+    Install-Package Sentry -Version 4.13.0
 </head>
 <body>
+    using System;
+using System.Windows.Forms;
+using Sentry;
+
+static class Program
+{
+    [STAThread]
+    static void Main()
+    {
+        // Init the Sentry SDK
+        SentrySdk.Init(o =>
+        {
+            // Tells which project in Sentry to send events to:
+            o.Dsn = "https://7f2742591171f3a268c123a787b08b89@o4508475682783232.ingest.us.sentry.io/4508475696742400";
+            // When configuring for the first time, to see what the SDK is doing:
+            o.Debug = true;
+            // Set TracesSampleRate to 1.0 to capture 100% of transactions for tracing.
+            // We recommend adjusting this value in production.
+            o.TracesSampleRate = 1.0;
+        });
+        // Configure WinForms to throw exceptions so Sentry can capture them.
+        Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
+
+        // Any other configuration you might have goes here...
+
+        Application.Run(new Form1());
+    }
+}
     <header>
         <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
         <h1>Southern New Hampshire Competitive Volleyball</h1>
