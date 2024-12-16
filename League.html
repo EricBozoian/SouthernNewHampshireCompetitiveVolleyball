@@ -55,7 +55,7 @@
         <span class="c5 c4"> to check out what complete teams have signed up so far! &#128064;</span>
     </p>
     <div class="button-container" style="text-align: center;">
-        <button class="btn" onclick="window.location.href='{{checkoutCompleteTeamSignUpLink}}';">
+        <button class="btn" onclick="window.location.href='{{completeTeamSignUpLink}}';">
             {{completeTeamSignUpButtonText}}
         </button>
     </div>
@@ -366,10 +366,11 @@
  <script>
     // Define the data object
     const data = {
-    // Buttons and links
-    completeTeamSignUpButtonText: "Complete Teams Sign up here!",
-    checkoutCompleteTeamSignUpLink: "cnn.com",
-    checkoutCompleteTeamSignUpText: "See Complete Signed-Up Teams",
+  // Buttons and links
+    completeTeamSignUpButtonText = "Complete Teams Sign up here!";
+    completeTeamSignUpLink = "https://example.com/teamsignup"; // Link for signing up
+    checkoutCompleteTeamSignUpLink = "https://cnn.com"; // Link to view signed-up teams
+    checkoutCompleteTeamSignUpText = "See Complete Signed-Up Teams";
     freeAgentSignUpLink: "cnn.com",
     freeAgentSignUpText: "Sign Up as a Free Agent",
     freeAgentListLink: "cnn.com",
