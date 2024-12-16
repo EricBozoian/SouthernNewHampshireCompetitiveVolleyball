@@ -325,6 +325,19 @@
   </div>
 </section>
 </script>
+    <!-- Error Log Container -->
+<div id="error-log" style="
+    background-color: #f8d7da; 
+    color: #721c24; 
+    padding: 10px; 
+    margin: 20px auto; 
+    border: 1px solid #f5c6cb; 
+    border-radius: 5px; 
+    max-width: 600px; 
+    display: none;">
+    <h3 style="margin: 0 0 10px;">Error Log</h3>
+    <ul id="error-list" style="margin: 0; padding-left: 20px;"></ul>
+</div>
 <footer>
   <p>Southern New Hampshire Competitive Volleyball @ 2024</p>
   <p>&#10013; With God all things are possible.</p>
@@ -472,6 +485,8 @@ const template = document.getElementById('my-template').innerHTML;
         // Also log the error to the browser console (for advanced debugging)
         console.error(errorMessage);
     }
+            // Test the error log
+    logError('This is a test error to make sure the error log works!');
 
     // Global error handler for runtime errors
     window.onerror = function (message, source, lineno, colno, error) {
