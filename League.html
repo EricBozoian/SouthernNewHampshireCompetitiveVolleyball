@@ -6,13 +6,13 @@
     <title>Southern NH Competitive Volleyball - League</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
 </head>
 <body>
     <header>
         <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
         <h1>Southern New Hampshire Competitive Volleyball</h1>
-        <p>A place for competitive volleyball2</p>
+        <p>A place for competitive volleyball3</p>
         <a href="All Events.html">
             <button class="btn">All Events</button>
         </a>
@@ -362,9 +362,9 @@
     slides[slideIndex - 1].style.display = "block";  
   }
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    // Define your data
+<!-- Mustache.js Rendering Script -->
+ <script>
+    // Define the data object
     const data = {
     // Buttons and links
     completeTeamSignUpButtonText: "Complete Teams Sign up here!",
@@ -438,18 +438,17 @@ document.addEventListener("DOMContentLoaded", () => {
     team5Player3: "TBD",
     team5Player4: "TBD",
     team5Player5: "TBD",
-    team5Player6: "TBD",
+    team5Player6: "TBD"
   };
 
-    // Select the entire page content
-    const pageContent = document.body.innerHTML;
+// Get the HTML content that will be used as a template
+    const template = document.body.innerHTML;
 
-    // Render the content using Mustache.js
-    const renderedContent = Mustache.render(pageContent, data);
+    // Render the template by merging it with the data object
+    const rendered = Mustache.render(template, data);
 
-    // Replace the entire page content with the rendered content
-    document.body.innerHTML = renderedContent;
-});
+    // Replace the body content with the rendered HTML
+    document.body.innerHTML = rendered;
 </script>
 </body>
 </html>
