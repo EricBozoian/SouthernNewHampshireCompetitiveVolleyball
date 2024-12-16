@@ -17,9 +17,6 @@
             <button class="btn">All Events</button>
         </a>
     </header>
-<!-- Add this container div for rendered Mustache content -->
-    <div id="content-container"></div>
-    <script type="text/template" id="my-template">
  <!-- Navigation Menu -->
 <nav>
     <ul class="menu">
@@ -240,6 +237,7 @@
         The playoff structure will be announced closer to the end of the regular season, pending final details surrounding the wedding and honeymoon.
     </p>
 </div>
+</div>
 <!-- Team Rosters Section -->
 <div class="team-roster-section">
     <h2>Team Rosters</h2>
@@ -324,27 +322,49 @@
     </p>
   </div>
 </section>
-</script>
-    <!-- Error Log Container -->
-<div id="error-log" style="
-    background-color: #f8d7da; 
-    color: #721c24; 
-    padding: 10px; 
-    margin: 20px auto; 
-    border: 1px solid #f5c6cb; 
-    border-radius: 5px; 
-    max-width: 600px; 
-    display: none;">
-    <h3 style="margin: 0 0 10px;">Error Log</h3>
-    <ul id="error-list" style="margin: 0; padding-left: 20px;"></ul>
-</div>
+
 <footer>
   <p>Southern New Hampshire Competitive Volleyball @ 2024</p>
   <p>&#10013; With God all things are possible.</p>
 </footer>
+<!-- JavaScript to control the slideshow -->
 <script>
-    try {
-const template = document.getElementById('my-template').innerHTML;
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Controls the next and previous buttons
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Controls which slide is shown
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+
+    // Reset slideIndex if out of bounds
+    if (n > slides.length) {
+      slideIndex = 1; // Loop back to the first slide
+    }
+    if (n < 1) {
+      slideIndex = slides.length; // Loop back to the last slide
+    }
+
+    // Hide all slides
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+
+    // Show the current slide
+    slides[slideIndex - 1].style.display = "block";  
+  }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
     // Define your data
     const data = {
     // Buttons and links
@@ -419,90 +439,18 @@ const template = document.getElementById('my-template').innerHTML;
     team5Player3: "TBD",
     team5Player4: "TBD",
     team5Player5: "TBD",
-    team5Player6: "TBD"
+    team5Player6: "TBD",
   };
 
-  const rendered = Mustache.render(template, data);
-      document.getElementById('content-container').innerHTML = rendered;}
-    catch (error) {
-    logError('Mustache Render Error: ' + error.message);
-}
-    </script>
-    <!-- JavaScript to control the slideshow -->
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
+    // Select the entire page content
+    const pageContent = document.body.innerHTML;
 
-  // Controls the next and previous buttons
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
+    // Render the content using Mustache.js
+    const renderedContent = Mustache.render(pageContent, data);
 
-  // Controls which slide is shown
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-
-    // Reset slideIndex if out of bounds
-    if (n > slides.length) {
-      slideIndex = 1; // Loop back to the first slide
-    }
-    if (n < 1) {
-      slideIndex = slides.length; // Loop back to the last slide
-    }
-
-    // Hide all slides
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-
-    // Show the current slide
-    slides[slideIndex - 1].style.display = "block";  
-  }
-</script>
-<!-- Add an error log container -->
-<div id="error-log" style="background-color: #f8d7da; color: #721c24; padding: 10px; margin-top: 20px; border: 1px solid #f5c6cb; border-radius: 5px; display: none;">
-    <h3>Error Log</h3>
-    <ul id="error-list"></ul>
-</div>
-    <script>
-    /**
-     * Logs errors to the error log container on the page.
-     * @param {string} errorMessage - The error message to log.
-     */
-    function logError(errorMessage) {
-        const errorLog = document.getElementById('error-log'); // Find the error log container
-        const errorList = document.getElementById('error-list'); // Find the list inside the container
-
-        // Show the error log container
-        errorLog.style.display = 'block';
-
-        // Add the error message to the list
-        const listItem = document.createElement('li'); // Create a new list item
-        listItem.textContent = errorMessage; // Set the error message as its text
-        errorList.appendChild(listItem); // Add the item to the list
-
-        // Also log the error to the browser console (for advanced debugging)
-        console.error(errorMessage);
-    }
-            // Test the error log
-    logError('This is a test error to make sure the error log works!');
-
-    // Global error handler for runtime errors
-    window.onerror = function (message, source, lineno, colno, error) {
-        const errorMessage = `Error: ${message} at ${source}:${lineno}:${colno}`; // Format the error message
-        logError(errorMessage); // Call the logError function
-    };
-
-    // Global handler for unhandled promise rejections
-    window.addEventListener('unhandledrejection', function (event) {
-        logError('Unhandled Promise Rejection: ' + event.reason); // Log unhandled promise rejections
-    });
+    // Replace the entire page content with the rendered content
+    document.body.innerHTML = renderedContent;
+});
 </script>
 </body>
 </html>
-
