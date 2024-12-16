@@ -327,42 +327,6 @@
   <p>Southern New Hampshire Competitive Volleyball @ 2024</p>
   <p>&#10013; With God all things are possible.</p>
 </footer>
-<!-- JavaScript to control the slideshow -->
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  // Controls the next and previous buttons
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  // Controls which slide is shown
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-
-    // Reset slideIndex if out of bounds
-    if (n > slides.length) {
-      slideIndex = 1; // Loop back to the first slide
-    }
-    if (n < 1) {
-      slideIndex = slides.length; // Loop back to the last slide
-    }
-
-    // Hide all slides
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-
-    // Show the current slide
-    slides[slideIndex - 1].style.display = "block";  
-  }
-</script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     // Define your data
@@ -450,7 +414,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Replace the entire page content with the rendered content
     document.body.innerHTML = renderedContent;
-});
+</script>
+    <!-- JavaScript to control the slideshow -->
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Controls the next and previous buttons
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Controls which slide is shown
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+
+    // Reset slideIndex if out of bounds
+    if (n > slides.length) {
+      slideIndex = 1; // Loop back to the first slide
+    }
+    if (n < 1) {
+      slideIndex = slides.length; // Loop back to the last slide
+    }
+
+    // Hide all slides
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+
+    // Show the current slide
+    slides[slideIndex - 1].style.display = "block";  
+  }
 </script>
 </body>
 </html>
