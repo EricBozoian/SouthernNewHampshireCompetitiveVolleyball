@@ -363,9 +363,9 @@
     slides[slideIndex - 1].style.display = "block";  
   }
 </script>
+<!-- Mustache.js Rendering Script -->
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    // Define your data
+    // Define the data object
     const data = {
     // Buttons and links
     completeTeamSignUpButtonText: "Complete Teams Sign up here!",
@@ -439,18 +439,17 @@ document.addEventListener("DOMContentLoaded", () => {
     team5Player3: "TBD",
     team5Player4: "TBD",
     team5Player5: "TBD",
-    team5Player6: "TBD",
+    team5Player6: "TBD"
   };
 
-    // Select the entire page content
-    const pageContent = document.body.innerHTML;
+   // Get the HTML content that will be used as a template
+    const template = document.body.innerHTML;
 
-    // Render the content using Mustache.js
-    const renderedContent = Mustache.render(pageContent, data);
+    // Render the template by merging it with the data object
+    const rendered = Mustache.render(template, data);
 
-    // Replace the entire page content with the rendered content
-    document.body.innerHTML = renderedContent;
-});
+    // Replace the body content with the rendered HTML
+    document.body.innerHTML = rendered;
 </script>
 </body>
 </html>
