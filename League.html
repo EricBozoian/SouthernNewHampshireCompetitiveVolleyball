@@ -12,7 +12,7 @@
     <header>
         <img src="SNHCVB-app-192x192.png" alt="Southern NH Competitive Volleyball Logo" class="logo">
         <h1>Southern New Hampshire Competitive Volleyball</h1>
-        <p>A place for competitive volleyball3</p>
+        <p>A place for competitive volleyball</p>
         <a href="All Events.html">
             <button class="btn">All Events</button>
         </a>
@@ -55,7 +55,7 @@
         <span class="c5 c4"> to check out what complete teams have signed up so far! &#128064;</span>
     </p>
     <div class="button-container" style="text-align: center;">
-        <button class="btn" onclick="window.location.href='{{checkoutCompleteTeamSignUpLink}}';">
+        <button class="btn" onclick="window.location.href='{{ completeTeamSignUpButtonLink}}';">
             {{completeTeamSignUpButtonText}}
         </button>
     </div>
@@ -368,6 +368,7 @@
     const data = {
     // Buttons and links
     completeTeamSignUpButtonText: "Complete Teams Sign up here!",
+    completeTeamSignUpButtonLink: "cnn.com",
     checkoutCompleteTeamSignUpLink: "cnn.com",
     checkoutCompleteTeamSignUpText: "See Complete Signed-Up Teams",
     freeAgentSignUpLink: "cnn.com",
