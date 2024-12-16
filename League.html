@@ -343,6 +343,7 @@
   <p>&#10013; With God all things are possible.</p>
 </footer>
 <script>
+    try {
 const template = document.getElementById('my-template').innerHTML;
     // Define your data
     const data = {
@@ -422,7 +423,10 @@ const template = document.getElementById('my-template').innerHTML;
   };
 
   const rendered = Mustache.render(template, data);
-      document.getElementById('content-container').innerHTML = rendered;
+      document.getElementById('content-container').innerHTML = rendered;}
+    catch (error) {
+    logError('Mustache Render Error: ' + error.message);
+}
     </script>
     <!-- JavaScript to control the slideshow -->
 <script>
