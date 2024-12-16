@@ -17,6 +17,9 @@
             <button class="btn">All Events</button>
         </a>
     </header>
+<!-- Add this container div for rendered Mustache content -->
+    <div id="content-container"></div>
+    <script type="text/template" id="my-template">
  <!-- Navigation Menu -->
 <nav>
     <ul class="menu">
@@ -322,7 +325,7 @@
     </p>
   </div>
 </section>
-
+</script>
 <footer>
   <p>Southern New Hampshire Competitive Volleyball @ 2024</p>
   <p>&#10013; With God all things are possible.</p>
@@ -364,7 +367,7 @@
   }
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+const template = document.getElementById('my-template').innerHTML;
     // Define your data
     const data = {
     // Buttons and links
@@ -442,16 +445,9 @@ document.addEventListener("DOMContentLoaded", () => {
     team5Player6: "TBD",
   };
 
-    // Select the entire page content
-    const pageContent = document.body.innerHTML;
-
-    // Render the content using Mustache.js
-    const renderedContent = Mustache.render(pageContent, data);
-
-    // Replace the entire page content with the rendered content
-    document.body.innerHTML = renderedContent;
-});
-</script>
+  const rendered = Mustache.render(template, data);
+      document.getElementById('content-container').innerHTML = rendered;
+    </script>
 </body>
 </html>
 
