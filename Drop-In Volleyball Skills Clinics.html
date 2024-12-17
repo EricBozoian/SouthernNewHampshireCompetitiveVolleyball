@@ -246,152 +246,41 @@
         {{/events}}
     `;
     var data = {
-        events: [
-            { 
-               title: "01/14 Novice Skills Clinic: Passing & Serving Fundamentals at YMCA, 90 Northwest Blvd (Nashua), $12 2hrs",
-                date: "Tuesday, 01/14/2025",
-                location: "YMCA, 90 Northwest Blvd, Nashua, NH 03063",
-                link: "https://example.com",
-                description: "This beginner-focused session will cover essential volleyball skills: passing and serving. Participants will learn:<br><br> <strong>• Passing Mechanics:</strong> Proper body positioning, platform creation, and directional passing.<br> <strong>• Serving Basics:</strong> Master underhand serving techniques for accuracy and distance.",
-                drills: [
-                    "Partner passing exercises to build consistency.",
-                    "Target-focused passing drills.",
-                    "Underhand serving repetitions to develop confidence and control."
-                ],
-                key_takeaway: "Build a strong foundation in passing and serving, two critical skills for all players."
-            }
-        ]
-            },
-    { 
-               title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: "",
-                drills: [
-                    "",
-                    "",
-                    ""
-                ],
-                key_takeaway: ""
-            }
-        ]
-            },
-       { 
-               title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: "",
-                drills: [
-                    "",
-                    "",
-                    ""
-                ],
-                key_takeaway: ""
-            }
-        ]
-            },
-       { 
-               title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: "",
-                drills: [
-                    "",
-                    "",
-                    ""
-                ],
-                key_takeaway: ""
-            }
-        ]
-            },
+    events: [
         { 
-               title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: "",
-                drills: [
-                    "",
-                    "",
-                    ""
-                ],
-                key_takeaway: ""
-            }
-        ]
-            },
-       { 
-               title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: "",
-                drills: [
-                    "",
-                    "",
-                    ""
-                ],
-                key_takeaway: ""
-            }
-        ]
-            },
-                     { 
-               title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: "",
-                drills: [
-                    "",
-                    "",
-                    ""
-                ],
-                key_takeaway: ""
-            }
-        ]
-            },
-                          { 
-               title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: "",
-                drills: [
-                    "",
-                    "",
-                    ""
-                ],
-                key_takeaway: ""
-            }
-        ]
-            },
-                           { 
-               title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: "",
-                drills: [
-                    "",
-                    "",
-                    ""
-                ],
-                key_takeaway: ""
-            }
-        ]
-            },
-            { 
-                title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: ""
-            }
-        ]
-    };
-
+            title: "01/14 Novice Skills Clinic: Passing & Serving Fundamentals at YMCA...",
+            date: "Tuesday, 01/14/2025",
+            location: "YMCA, 90 Northwest Blvd, Nashua, NH 03063",
+            link: "https://example.com",
+            description: "This beginner-focused session will cover essential volleyball skills...",
+            drills: [
+                "Partner passing exercises...",
+                "Target-focused passing drills.",
+                "Underhand serving repetitions..."
+            ],
+            key_takeaway: "Build a strong foundation in passing and serving."
+        },
+        {
+            title: "",
+            date: "",
+            location: "",
+            link: "",
+            description: "",
+            drills: ["", "", ""],
+            key_takeaway: ""
+        },
+        {
+            title: "",
+            date: "",
+            location: "",
+            link: "",
+            description: "",
+            drills: ["", "", ""],
+            key_takeaway: ""
+        }
+        // Add as many event objects as needed, separated by commas
+    ]
+};
     var rendered = Mustache.render(template, data);
     document.getElementById('events-container').innerHTML = rendered;
 </script>
