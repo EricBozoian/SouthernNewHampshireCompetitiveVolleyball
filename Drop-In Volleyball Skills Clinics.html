@@ -213,23 +213,54 @@
 <script>
     var template = `
         {{#events}}
-            <div class="event">
-                {{#title}}<a href="{{link}}" target="_blank">{{title}}</a>{{/title}}
-                {{#date}}<p><strong>Date:</strong> {{date}}</p>{{/date}}
-                {{#location}}<p><strong>Location:</strong> {{location}}</p>{{/location}}
-                {{#description}}<p>{{description}}</p>{{/description}}
+            <div class="event" style="margin-bottom: 20px; border: 1px solid #ddd; padding: 10px;">
+                {{#title}}<h3 style="font-weight: bold; margin: 0 0 10px;">{{title}}</h3>{{/title}}
+
+                {{#date}}
+                    <p><strong>Date:</strong> {{date}}</p>
+                {{/date}}
+
+                {{#location}}
+                    <p><strong>Location:</strong> {{location}}</p>
+                {{/location}}
+
+                {{#link}}
+                    <p><strong>Link:</strong> <a href="{{link}}" target="_blank">Placeholder Link</a></p>
+                {{/link}}
+
+                {{#description}}
+                    <p><strong>Description:</strong> {{description}}</p>
+                {{/description}}
+
+                {{#key_takeaway}}
+                    <p><strong>Key Takeaway:</strong> {{key_takeaway}}</p>
+                {{/key_takeaway}}
+
+                <p style="font-weight: bold; margin-top: 10px;">Drills Include:</p>
+                <ul style="margin: 0; padding-left: 20px;">
+                    {{#drills}}
+                        <li>{{.}}</li>
+                    {{/drills}}
+                </ul>
             </div>
         {{/events}}
     `;
-
     var data = {
         events: [
             { 
-                title: "",
-                date: "",
-                location: "",
-                link: "",
-                description: ""
+               title: "01/14 Novice Skills Clinic: Passing & Serving Fundamentals at YMCA, 90 Northwest Blvd (Nashua), $12 2hrs",
+                date: "Tuesday, 01/14/2025",
+                location: "YMCA, 90 Northwest Blvd, Nashua, NH 03063",
+                link: "https://example.com",
+                description: "This beginner-focused session will cover essential volleyball skills: passing and serving. Participants will learn:<br><br> <strong>• Passing Mechanics:</strong> Proper body positioning, platform creation, and directional passing.<br> <strong>• Serving Basics:</strong> Master underhand serving techniques for accuracy and distance.",
+                drills: [
+                    "Partner passing exercises to build consistency.",
+                    "Target-focused passing drills.",
+                    "Underhand serving repetitions to develop confidence and control."
+                ],
+                key_takeaway: "Build a strong foundation in passing and serving, two critical skills for all players."
+            }
+        ]
             },
             { 
                 title: "",
