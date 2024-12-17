@@ -214,18 +214,20 @@
     var template = `
         {{#events}}
             <div class="event" style="margin-bottom: 20px; border: 1px solid #ddd; padding: 10px;">
-                {{#title}}<h3 style="font-weight: bold; margin: 0 0 10px;">{{title}}</h3>{{/title}}
+                {{#title}}
+                    <h3 style="font-weight: bold; margin: 0 0 10px; text-align: center;">{{title}}</h3>
+                {{/title}}
 
                 {{#date}}
-                    <p><strong>Date:</strong> {{date}}</p>
+                    <p style="text-align: center;"><strong>Date:</strong> {{date}}</p>
                 {{/date}}
 
                 {{#location}}
-                    <p><strong>Location:</strong> {{location}}</p>
+                    <p style="text-align: center;"><strong>Location:</strong> {{location}}</p>
                 {{/location}}
 
                 {{#link}}
-                    <p><strong>Link:</strong> <a href="{{link}}" target="_blank">Placeholder Link</a></p>
+                    <p style="text-align: center;"><strong>Link:</strong> <a href="{{link}}" target="_blank">Placeholder Link</a></p>
                 {{/link}}
 
                 {{#description}}
@@ -236,12 +238,14 @@
                     <p><strong>Key Takeaway:</strong> {{key_takeaway}}</p>
                 {{/key_takeaway}}
 
-                <p style="font-weight: bold; margin-top: 10px;">Drills Include:</p>
-                <ul style="margin: 0; padding-left: 20px;">
-                    {{#drills}}
-                        <li>{{.}}</li>
-                    {{/drills}}
-                </ul>
+                <p style="font-weight: bold; margin-top: 10px; text-align: center;">Drills Include:</p>
+                <div style="display: flex; justify-content: center;">
+                    <ul style="list-style-position: inside; text-align: left; margin: 0; padding-left: 0;">
+                        {{#drills}}
+                            <li style="margin-left: 0;">{{.}}</li>
+                        {{/drills}}
+                    </ul>
+                </div>
             </div>
         {{/events}}
     `;
