@@ -246,37 +246,25 @@ Eric may make on-the-fly adjustments if the teams appear to be unbalanced during
     </footer>
 
 <!-- Mustache.js Rendering Script -->
-
 <script>
-
     // Define the data object
-
     const data = {
-
-        eventTitle: "02/20 COED Indoor Volleyball at Girls Inc of New Hampshire (Nashua), $12 3hrs",
+        eventTitle: "04/10 Indoor Volleyball at Girls Inc of New Hampshire (Nashua), $12 3hrs",
         signupLink: "https://forms.gle/FXwjc6wwRzgVMXKdA",
-        eventDateTime: "Thursday, February 20, 2025 5:45pm - 9:00pm",
+        eventDateTime: "Thursday, April 10, 2025 5:45pm - 9:00pm",
         eventLocation: "Girls Inc of New Hampshire",
-        eventCity: "Nashua NH",
+        eventCity: "Nashua, NH",
         signupListLink: "https://docs.google.com/spreadsheets/d/1b0We49AUP858gi91M-0MM0oFiYTkc2nuBcpD1AAHa0I/edit?usp=sharing"
     };
 
-        // Get the HTML content that will be used as a template
+    // Get the HTML content that will be used as a template
+    const template = document.body.innerHTML;
 
-        const template = document.body.innerHTML;
+    // Render the template by merging it with the data object
+    const rendered = Mustache.render(template, data);
 
-
-
-        // Render the template by merging it with the data object
-
-        const rendered = Mustache.render(template, data);
-
-
-
-        // Replace the body content with the rendered HTML
-
-        document.body.innerHTML = rendered;
-
+    // Replace the body content with the rendered HTML
+    document.body.innerHTML = rendered;
 </script>
 </body>
 </html
